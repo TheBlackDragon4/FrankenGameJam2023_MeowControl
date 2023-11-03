@@ -1,60 +1,60 @@
 [gd_scene load_steps=3 format=3 uid="uid://yhp7g6rm3205"]
 
-[ext_resource type="Texture2D" uid="uid://cko5ykgw44vo0" path="res://assets/background/demo_control_room.png" id="1_yg3q4"]
-[ext_resource type="Script" path="res://Button.gd" id="2_dmtuw"]
+[ext_resource type="Texture2D" uid="uid://cko5ykgw44vo0" path="res://assets/background/demo_control_room.png" id="1_4iywt"]
+[ext_resource type="Script" path="res://controlScene/Button.gd" id="2_4j7go"]
 
 [node name="control_room" type="Node2D"]
 
 [node name="DemoControlRoom" type="Sprite2D" parent="."]
 position = Vector2(541, 336)
 scale = Vector2(0.878444, 0.898396)
-texture = ExtResource("1_yg3q4")
+texture = ExtResource("1_4iywt")
 
 [node name="Button" type="Button" parent="DemoControlRoom"]
 offset_left = -73.9945
 offset_top = -93.5
 offset_right = 72.0055
 offset_bottom = 9.49997
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button2" type="Button" parent="DemoControlRoom"]
 offset_left = -314.192
 offset_top = -96.8393
 offset_right = -168.192
 offset_bottom = 6.16074
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button3" type="Button" parent="DemoControlRoom"]
 offset_left = 165.065
 offset_top = -97.9524
 offset_right = 311.065
 offset_bottom = 5.04761
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button4" type="Button" parent="DemoControlRoom"]
 offset_left = 191.247
 offset_top = 60.1071
 offset_right = 337.247
 offset_bottom = 163.107
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button5" type="Button" parent="DemoControlRoom"]
 offset_left = 14.7989
 offset_top = 60.1071
 offset_right = 160.799
 offset_bottom = 163.107
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button6" type="Button" parent="DemoControlRoom"]
 offset_left = -167.341
 offset_top = 56.7679
 offset_right = -21.3413
 offset_bottom = 159.768
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
 
 [node name="Button7" type="Button" parent="DemoControlRoom"]
 offset_left = -343.79
 offset_top = 61.2202
 offset_right = -197.79
 offset_bottom = 164.22
-script = ExtResource("2_dmtuw")
+script = ExtResource("2_4j7go")
