@@ -19,4 +19,7 @@ position = Vector2(260, -12)
 wait_time = 2.0
 autostart = true
 
+[node name="Npc Destination" type="Marker2D" parent="."]
+position = Vector2(72, -442)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
