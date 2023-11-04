@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://3rby5ppxao1r"]
+[gd_scene load_steps=6 format=3 uid="uid://3rby5ppxao1r"]
 
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInScene.gd" id="4_qqw6y"]
-[ext_resource type="Texture2D" uid="uid://tfmcaemjvmne" path="res://assets/popupTemplate.png" id="5_smeu8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0ccqd"]
 
@@ -17,7 +16,7 @@ script = ExtResource("1_vehiw")
 texture = ExtResource("2_pe4wd")
 
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
-position = Vector2(260, -12)
+position = Vector2(255, -13)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -38,10 +37,6 @@ scale = Vector2(0.9922, 1.00462)
 theme_override_font_sizes/font_size = 25
 text = "Back to Menu"
 script = ExtResource("4_qqw6y")
-
-[node name="popUpNpcImage" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("5_smeu8")
 
 [node name="DialogContainer" type="Node2D" parent="."]
 

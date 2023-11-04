@@ -19,4 +19,4 @@ func _on_timer_timeout():
 	
 	
 func _on_area_2d_body_entered(body):
-	$popUpNpcImage.show()
+	DialogueManager.show_example_dialogue_balloon(load("res://dialog/template.dialogue"), "welcome_customer")
