@@ -14,5 +14,11 @@ func _process(delta):
 func _on_timer_timeout():
 	var n = npc.instantiate()
 	n.position = Vector2(-716, 6)
-	add_child(n)
+	$NpcContainer.add_child(n)
 	$Timer.stop()
+	
+
+func _on_area_2d_body_entered(body):
+	$popUpNpcImage.show()
+	$DialogContainer/Area2D/CollisionShape2D.disabled = true
+

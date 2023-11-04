@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5uq"]
 size = Vector2(128, 128)
 
-[node name="Npc" type="CharacterBody2D"]
+[node name="Npc" type="CharacterBody2D" groups=["Npc"]]
 scale = Vector2(1.03075, 2.25718)
 script = ExtResource("1_yfrev")
 metadata/_edit_group_ = true
