@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://gfhayxqocgpa"]
+[gd_scene load_steps=6 format=3 uid="uid://gfhayxqocgpa"]
 
 [ext_resource type="Texture2D" uid="uid://d08xq5uts1lb8" path="res://assets/background/background-1431052_1920.png" id="1_uxbes"]
 [ext_resource type="Script" path="res://scenes/menu/MarginContainer cred.gd" id="2_58x2e"]
 [ext_resource type="AudioStream" uid="uid://brm2j6liw3n2a" path="res://assets/BGM/Title BGM glass-of-wine-143532.mp3" id="3_hgdx7"]
+[ext_resource type="Texture2D" uid="uid://dlgxj47rcomsr" path="res://assets/background/namen.png" id="4_3ol0j"]
 
 [sub_resource type="SystemFont" id="SystemFont_5bqhh"]
 font_names = PackedStringArray("Vladimir Script")
@@ -18,9 +19,9 @@ texture = ExtResource("1_uxbes")
 
 [node name="MarginContainer cred" type="MarginContainer" parent="."]
 offset_left = -88.0
-offset_top = 48.0
+offset_top = 379.085
 offset_right = 77.28
-offset_bottom = 117.0
+offset_bottom = 448.085
 script = ExtResource("2_58x2e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer cred"]
@@ -40,5 +41,10 @@ text = "Back"
 stream = ExtResource("3_hgdx7")
 autoplay = true
 bus = &"BGM"
+
+[node name="Namen" type="Sprite2D" parent="."]
+position = Vector2(135, -36)
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("4_3ol0j")
 
 [connection signal="pressed" from="MarginContainer cred/VBoxContainer/Back" to="MarginContainer cred" method="_on_back_pressed"]
