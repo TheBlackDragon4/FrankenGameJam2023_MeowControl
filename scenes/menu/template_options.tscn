@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://chk3jh4ly2hpr"]
+[gd_scene load_steps=7 format=3 uid="uid://chk3jh4ly2hpr"]
 
 [ext_resource type="Texture2D" uid="uid://d08xq5uts1lb8" path="res://assets/background/background-1431052_1920.png" id="1_t7iun"]
 [ext_resource type="Script" path="res://scenes/menu/MarginContainer.gd" id="2_4msnv"]
 [ext_resource type="AudioStream" uid="uid://brm2j6liw3n2a" path="res://assets/BGM/Title BGM glass-of-wine-143532.mp3" id="3_yq43t"]
 [ext_resource type="Script" path="res://scenes/menu/HSlider.gd" id="4_d8hto"]
+[ext_resource type="Texture2D" uid="uid://d3jxavjuarcuk" path="res://assets/background/volume.png" id="5_uvqns"]
 
 [sub_resource type="SystemFont" id="SystemFont_5pfm6"]
 font_names = PackedStringArray("Vladimir Script")
@@ -19,9 +20,9 @@ texture = ExtResource("1_t7iun")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = -95.0
-offset_top = 14.0
+offset_top = -51.715
 offset_right = 77.6
-offset_bottom = 83.0
+offset_bottom = 19.03
 script = ExtResource("2_4msnv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -43,13 +44,19 @@ autoplay = true
 bus = &"BGM"
 
 [node name="VolSliderMaster" type="HSlider" parent="."]
-offset_left = -167.0
+offset_left = -236.0
 offset_top = -186.0
-offset_right = 168.0
-offset_bottom = -157.245
+offset_right = 15.0001
+offset_bottom = -157.0
+scale = Vector2(1.81, 1.81)
 min_value = -60.0
 max_value = 0.0
 tick_count = 5
 script = ExtResource("4_d8hto")
+
+[node name="Volume" type="Sprite2D" parent="."]
+position = Vector2(-39, -209)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("5_uvqns")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="MarginContainer" method="_on_back_pressed"]
