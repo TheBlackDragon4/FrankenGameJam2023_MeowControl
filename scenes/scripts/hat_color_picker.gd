@@ -1,6 +1,7 @@
 extends Node2D
 
-var color_counter = 1
+var color_counter = 1 #counter for the currently selected color
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,8 +13,10 @@ func _process(delta):
 	pass
 
 
-func _on_color_go_right_pressed():
+func _on_color_go_right_pressed(): 
+	##button displays the next color to the right
 	
+	#hide currently displayed color
 	if color_counter == 1:
 		$hat_color_1.hide()
 		color_counter += 1
@@ -39,7 +42,9 @@ func _on_color_go_right_pressed():
 		$hat_color_8.hide()
 		color_counter = 1
 	
-	if color_counter == 1:
+	
+	#show next color
+	if color_counter == 1: 
 		$hat_color_1.show()
 	elif color_counter == 2:
 		$hat_color_2.show()
@@ -57,6 +62,9 @@ func _on_color_go_right_pressed():
 		$hat_color_8.show()
 
 func _on_color_go_left_pressed():
+	##button displays the next color to the left
+	
+	#hide currently displayed color
 	if color_counter == 1:
 		$hat_color_1.hide()
 		color_counter = 8
@@ -82,6 +90,7 @@ func _on_color_go_left_pressed():
 		$hat_color_8.hide()
 		color_counter -= 1
 	
+	#show next color
 	if color_counter == 1:
 		$hat_color_1.show()
 	elif color_counter == 2:

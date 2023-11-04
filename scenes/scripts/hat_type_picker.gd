@@ -1,6 +1,6 @@
 extends Node2D
 
-var type_counter = 1
+var type_counter = 1 #counter for the currently selected type
 
 
 
@@ -18,7 +18,10 @@ func _process(delta):
 
 func _on_type_go_right_pressed():
 	
-	if type_counter == 1:
+	##button displays the next type to the right
+	
+	#hide currently displayed type
+	if type_counter == 1: 
 		$hat_type_1.hide()
 		type_counter += 1
 	elif type_counter == 2:
@@ -43,7 +46,8 @@ func _on_type_go_right_pressed():
 		$hat_type_8.hide()
 		type_counter = 1
 	
-	if type_counter == 1:
+	#show next type
+	if type_counter == 1:  
 		$hat_type_1.show()
 	elif type_counter == 2:
 		$hat_type_2.show()
@@ -62,6 +66,10 @@ func _on_type_go_right_pressed():
 
 
 func _on_type_go_left_pressed():
+	
+	##button displays the next type to the right
+	
+	#hide currently displayed type
 	if type_counter == 1:
 		$hat_type_1.hide()
 		type_counter = 8
@@ -87,6 +95,7 @@ func _on_type_go_left_pressed():
 		$hat_type_8.hide()
 		type_counter -= 1
 	
+	#show next type
 	if type_counter == 1:
 		$hat_type_1.show()
 	elif type_counter == 2:
