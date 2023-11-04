@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://1mmfq1hajfbx"]
+
+[ext_resource type="Script" path="res://scenes/optimization/scripts/optimization.gd" id="1_dwooy"]
+[ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/optimization/background_white.png" id="2_vkxwr"]
+[ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/optimization/background_hat_building.jpeg" id="3_yfxi5"]
+[ext_resource type="Script" path="res://scenes/optimization/ButtonNEXTInNightScene.gd" id="4_gy8l3"]
+
+[node name="Optimization" type="Node2D"]
+script = ExtResource("1_dwooy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("2_vkxwr")
+
+[node name="create_hat" type="Sprite2D" parent="."]
+position = Vector2(-536, -256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_yfxi5")
+
+[node name="create_hat2" type="Button" parent="."]
+offset_left = -720.0
+offset_top = -24.0
+offset_right = -384.0
+offset_bottom = 93.0
+text = "Create hats"
+
+[node name="NextButton" type="MenuButton" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 728.0
+offset_top = 402.0
+offset_right = 911.0
+offset_bottom = 497.0
+scale = Vector2(0.9922, 1.00462)
+theme_override_font_sizes/font_size = 25
+text = "Next"
+script = ExtResource("4_gy8l3")
+
+[connection signal="pressed" from="create_hat2" to="." method="_on_create_hat_2_pressed"]

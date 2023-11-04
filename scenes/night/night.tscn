@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdoa0xo7uidex"]
+
+[ext_resource type="Script" path="res://scenes/night/night_scene.gd" id="1_4lp2t"]
+[ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/night/background_night.png" id="2_rqpef"]
+[ext_resource type="Texture2D" uid="uid://cqbtci3gtesig" path="res://assets/night/moon.png" id="3_aadhj"]
+
+[sub_resource type="Animation" id="Animation_ohxwn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("moon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-762, -211)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gyidn"]
+_data = {
+"RESET": SubResource("Animation_ohxwn")
+}
+
+[sub_resource type="Animation" id="Animation_lajf8"]
+resource_name = "moon_movement"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("moon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 4.1, 7.2, 11.2, 15.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1049, -20), Vector2(-762, -211), Vector2(-320, -384), Vector2(544, -328), Vector2(1032, -48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0unwp"]
+_data = {
+"moon_movement": SubResource("Animation_lajf8")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(8, 56)
+
+[node name="night_scene" type="Node" parent="."]
+script = ExtResource("1_4lp2t")
+
+[node name="Camera2D" type="Camera2D" parent="night_scene"]
+
+[node name="background" type="Sprite2D" parent="night_scene"]
+texture = ExtResource("2_rqpef")
+
+[node name="moon" type="Sprite2D" parent="night_scene"]
+position = Vector2(-762, -211)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_aadhj")
+
+[node name="button_skip" type="Button" parent="night_scene"]
+offset_left = 508.0
+offset_top = 473.0
+offset_right = 908.0
+offset_bottom = 509.0
+text = "skip night"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="night_scene"]
+autoplay = "Moon/moon_movement"
+libraries = {
+"": SubResource("AnimationLibrary_gyidn"),
+"Moon": SubResource("AnimationLibrary_0unwp")
+}
+
+[connection signal="tree_entered" from="night_scene" to="night_scene" method="_on_tree_entered"]
+[connection signal="pressed" from="night_scene/button_skip" to="night_scene" method="_on_button_pressed"]
