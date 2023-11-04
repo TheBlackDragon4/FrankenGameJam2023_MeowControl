@@ -10,6 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
+
 func _pressed():
-	get_tree().change_scene_to_file("res://controlScene/control_room.tscn")
+	get_tree().change_scene_to_file("res://scenes/control_room/control_room.tscn")
 

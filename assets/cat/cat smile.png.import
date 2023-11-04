@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6snplba37523"
-path="res://.godot/imported/test.png-e1897cea1a25ad638c2bda49bb72482f.ctex"
+uid="uid://bqsopwrcyvhy6"
+path="res://.godot/imported/cat smile.png-8f9719a26cf6e0caaa95a2806e797d66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/test.png"
-dest_files=["res://.godot/imported/test.png-e1897cea1a25ad638c2bda49bb72482f.ctex"]
+source_file="res://assets/cat/cat smile.png"
+dest_files=["res://.godot/imported/cat smile.png-8f9719a26cf6e0caaa95a2806e797d66.ctex"]
 
 [params]
 

@@ -1,0 +1,155 @@
+[gd_scene load_steps=6 format=3 uid="uid://yhp7g6rm3205"]
+
+[ext_resource type="Texture2D" uid="uid://dxg703irb18fr" path="res://assets/background/example_control_room.jpg" id="1_cjn6r"]
+[ext_resource type="Script" path="res://scenes/control_room/Button.gd" id="2_q4vab"]
+[ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="3_irl6d"]
+[ext_resource type="Script" path="res://scenes/control_room/Button_LEFT_UP.gd" id="4_atbhi"]
+[ext_resource type="Texture2D" uid="uid://bqsopwrcyvhy6" path="res://assets/cat/cat smile.png" id="5_723m0"]
+
+[node name="control_room" type="Node2D"]
+
+[node name="ExampleControlRoom" type="Sprite2D" parent="."]
+position = Vector2(119, 41)
+scale = Vector2(1.89844, 1.18945)
+texture = ExtResource("1_cjn6r")
+
+[node name="Button" type="Button" parent="ExampleControlRoom"]
+offset_left = -21.0699
+offset_top = -169.826
+offset_right = 18.9297
+offset_bottom = -129.826
+scale = Vector2(0.988953, 1.02987)
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="ExampleControlRoom"]
+offset_left = -24.2304
+offset_top = -338.812
+offset_right = 15.7691
+offset_bottom = -298.812
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="ExampleControlRoom"]
+offset_left = -230.716
+offset_top = -329.564
+offset_right = -190.716
+offset_bottom = -289.564
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="ExampleControlRoom"]
+offset_left = -49.8662
+offset_top = 38.4507
+offset_right = -9.86617
+offset_bottom = 78.4506
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button6" type="Button" parent="ExampleControlRoom"]
+offset_left = -234.403
+offset_top = -168.145
+offset_right = -194.403
+offset_bottom = -128.145
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button7" type="Button" parent="ExampleControlRoom"]
+offset_left = -447.209
+offset_top = -160.578
+offset_right = -407.209
+offset_bottom = -120.579
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button8" type="Button" parent="ExampleControlRoom"]
+anchors_preset = -1
+anchor_left = -1.02716
+anchor_top = -0.735642
+anchor_right = -1.02716
+anchor_bottom = -0.735642
+offset_left = 1236.7
+offset_top = 430.459
+offset_right = 1276.7
+offset_bottom = 470.459
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button9" type="Button" parent="ExampleControlRoom"]
+anchors_preset = -1
+anchor_left = -1.02716
+anchor_top = -0.735642
+anchor_right = -1.02716
+anchor_bottom = -0.735642
+offset_left = 1471.63
+offset_top = 432.14
+offset_right = 1511.63
+offset_bottom = 472.14
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button10" type="Button" parent="ExampleControlRoom"]
+anchors_preset = -1
+anchor_left = -27.1485
+anchor_top = -1.6188
+anchor_right = -27.1485
+anchor_bottom = -1.6188
+offset_left = 28217.8
+offset_top = 1493.71
+offset_right = 28257.8
+offset_bottom = 1533.7
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button11" type="Button" parent="ExampleControlRoom"]
+anchors_preset = -1
+anchor_left = -17.4985
+anchor_top = 61.7161
+anchor_right = -17.4985
+anchor_bottom = 61.7161
+offset_left = 18101.8
+offset_top = -63353.7
+offset_right = 18141.8
+offset_bottom = -63313.7
+script = ExtResource("2_q4vab")
+metadata/_edit_use_anchors_ = true
+
+[node name="Shopfront" type="Sprite2D" parent="ExampleControlRoom"]
+visibility_layer = 7
+position = Vector2(-426.667, -311.067)
+scale = Vector2(0.081843, 0.143234)
+texture = ExtResource("3_irl6d")
+
+[node name="Button_LEFT_UP" type="Button" parent="ExampleControlRoom/Shopfront"]
+visibility_layer = 3
+anchors_preset = -1
+anchor_left = -0.000662136
+anchor_top = -0.000339536
+anchor_right = 0.985275
+anchor_bottom = 0.957068
+offset_left = -965.172
+offset_top = -533.764
+offset_right = -925.172
+offset_bottom = -493.764
+script = ExtResource("4_atbhi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(120, 40)
+rotation = 3.14159
+scale = Vector2(2430.78, -166.455)
+
+[node name="CatSmile" type="Sprite2D" parent="."]
+position = Vector2(106.5, 143.5)
+scale = Vector2(0.702381, 0.715278)
+texture = ExtResource("5_723m0")
+
+[node name="GoToSleep" type="MenuButton" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -811.0
+offset_top = 461.0
+offset_right = -628.0
+offset_bottom = 556.0
+scale = Vector2(0.988414, 1.00121)
+theme_override_font_sizes/font_size = 25
+text = "Go to sleep"
