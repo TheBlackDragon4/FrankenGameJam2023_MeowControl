@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgvner21fur5w"]
 
-[ext_resource type="Texture2D" uid="uid://b6snplba37523" path="res://assets/background/test.png" id="1_hr8hl"]
-[ext_resource type="Script" path="res://backButton/MenuButton.gd" id="2_p4es2"]
+[ext_resource type="Texture2D" uid="uid://b6snplba37523" path="res://assets/background/test.png" id="1_cbhi4"]
+[ext_resource type="Script" path="res://backButton/MenuButton.gd" id="2_ludbt"]
 
 [node name="testScene" type="Node2D"]
 
 [node name="Test" type="Sprite2D" parent="."]
 position = Vector2(512, 373)
-texture = ExtResource("1_hr8hl")
+texture = ExtResource("1_cbhi4")
 
 [node name="MenuButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -16,4 +16,4 @@ offset_top = 650.0
 offset_right = 996.0
 offset_bottom = 720.0
 text = "Zurück"
-script = ExtResource("2_p4es2")
+script = ExtResource("2_ludbt")
