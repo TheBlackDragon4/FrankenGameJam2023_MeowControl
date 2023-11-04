@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://de421dxllg256"]
+[gd_scene load_steps=23 format=3 uid="uid://de421dxllg256"]
 
+[ext_resource type="Script" path="res://scenes/scripts/hat_production.gd" id="1_es8tx"]
 [ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/background_white.png" id="1_n87me"]
 [ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/background_hat_building.jpeg" id="2_qcqo5"]
 [ext_resource type="Script" path="res://scenes/scripts/hat_type_picker.gd" id="3_qfi3k"]
@@ -23,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://230iglojqj7k" path="res://assets/hat_color/hat_white.png" id="20_76il1"]
 
 [node name="hat_production" type="Node2D"]
+script = ExtResource("1_es8tx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
@@ -31,8 +33,8 @@ position = Vector2(0, -1)
 texture = ExtResource("1_n87me")
 
 [node name="background_hat_factory" type="Sprite2D" parent="."]
-position = Vector2(580, -163)
-scale = Vector2(0.7, 0.7)
+position = Vector2(703, -284)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_qcqo5")
 
 [node name="hat_type_picker" type="Node2D" parent="."]
@@ -173,7 +175,66 @@ position = Vector2(-538, -148)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_76il1")
 
+[node name="new_hat" type="Node2D" parent="."]
+
+[node name="new_hat" type="Sprite2D" parent="new_hat"]
+position = Vector2(-538, 133)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="new_hat_color" type="Sprite2D" parent="new_hat"]
+visible = false
+position = Vector2(-538, 133)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_e85kt")
+
+[node name="new_hat_type" type="Sprite2D" parent="new_hat"]
+visible = false
+position = Vector2(-538, 133)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_0x4wv")
+
+[node name="create_new_hat" type="Button" parent="new_hat"]
+offset_left = -637.0
+offset_top = -21.0
+offset_right = -438.0
+offset_bottom = 10.0
+text = "create"
+
+[node name="hat_storage" type="Node2D" parent="."]
+
+[node name="storage_space_1" type="Sprite2D" parent="hat_storage"]
+position = Vector2(143, 390)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="storage_space_1_sprite" type="Sprite2D" parent="hat_storage"]
+visible = false
+position = Vector2(143, 390)
+scale = Vector2(0.5, 0.5)
+
+[node name="storage_space_2" type="Sprite2D" parent="hat_storage"]
+position = Vector2(479, 393)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="storage_space_2_sprite" type="Sprite2D" parent="hat_storage"]
+visible = false
+position = Vector2(479, 393)
+scale = Vector2(0.5, 0.5)
+
+[node name="storage_space_3" type="Sprite2D" parent="hat_storage"]
+position = Vector2(801, 385)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="storage_space_3_sprite" type="Sprite2D" parent="hat_storage"]
+visible = false
+position = Vector2(801, 385)
+scale = Vector2(0.5, 0.5)
+
 [connection signal="pressed" from="hat_type_picker/type_go_right" to="hat_type_picker" method="_on_type_go_right_pressed"]
 [connection signal="pressed" from="hat_type_picker/type_go_left" to="hat_type_picker" method="_on_type_go_left_pressed"]
 [connection signal="pressed" from="hat_color_picker/color_go_right" to="hat_color_picker" method="_on_color_go_right_pressed"]
 [connection signal="pressed" from="hat_color_picker/color_go_left" to="hat_color_picker" method="_on_color_go_left_pressed"]
+[connection signal="pressed" from="new_hat/create_new_hat" to="." method="_on_create_new_hat_pressed"]
