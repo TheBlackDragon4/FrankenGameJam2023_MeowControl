@@ -1,4 +1,5 @@
-extends Node
+extends Node2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,7 @@ func _process(delta):
 	pass
 
 
-
-
-func _on_button_pressed():
-	#skip night button ends night scene instantly
-	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")
+func _on_create_hat_2_pressed():
+	##changes scene to hat_production
+	
+	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")

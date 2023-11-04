@@ -44,10 +44,10 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_1bf3n")
 
 [node name="button_skip" type="Button" parent="night_scene"]
-offset_left = -200.0
-offset_top = 480.0
-offset_right = 200.0
-offset_bottom = 516.0
+offset_left = 508.0
+offset_top = 473.0
+offset_right = 908.0
+offset_bottom = 509.0
 text = "skip night"
 metadata/_edit_use_anchors_ = true
 

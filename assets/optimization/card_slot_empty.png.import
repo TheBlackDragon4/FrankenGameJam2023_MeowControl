@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lckxoh06novl"
-path="res://.godot/imported/hat_orange.png-81eea528555cdd83d77cbefe31bac007.ctex"
+uid="uid://diqdfir6u5wcs"
+path="res://.godot/imported/card_slot_empty.png-52086eeb0354936e8109cca5ca8237c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hat_color/hat_orange.png"
-dest_files=["res://.godot/imported/hat_orange.png-81eea528555cdd83d77cbefe31bac007.ctex"]
+source_file="res://assets/optimization/card_slot_empty.png"
+dest_files=["res://.godot/imported/card_slot_empty.png-52086eeb0354936e8109cca5ca8237c8.ctex"]
 
 [params]
 

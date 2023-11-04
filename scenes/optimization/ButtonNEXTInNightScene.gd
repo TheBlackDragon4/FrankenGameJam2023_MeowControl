@@ -1,4 +1,4 @@
-extends Node2D
+extends MenuButton
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_create_hat_2_pressed():
-	##changes scene to hat_production
-	
-	get_tree().change_scene_to_file("res://scenes/hat_production.tscn")
+func _pressed():
+	get_tree().change_scene_to_file("res://scenes/night/night.tscn")

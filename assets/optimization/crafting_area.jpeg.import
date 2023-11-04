@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt24nowjb06a7"
-path="res://.godot/imported/hat_green.png-7a570eb768f66f7772e5b83299096eed.ctex"
+uid="uid://bhkvcx68nn8t2"
+path="res://.godot/imported/crafting_area.jpeg-ed4c5e16a0449d63a731a2c5b4a5bcf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hat_color/hat_green.png"
-dest_files=["res://.godot/imported/hat_green.png-7a570eb768f66f7772e5b83299096eed.ctex"]
+source_file="res://assets/optimization/crafting_area.jpeg"
+dest_files=["res://.godot/imported/crafting_area.jpeg-ed4c5e16a0449d63a731a2c5b4a5bcf1.ctex"]
 
 [params]
 
