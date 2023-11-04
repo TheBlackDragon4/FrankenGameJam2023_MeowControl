@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://3rby5ppxao1r"]
+[gd_scene load_steps=6 format=3 uid="uid://3rby5ppxao1r"]
 
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 
-[node name="Shopfront" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ccqd"]
+
+[node name="Shopfront" type="Node2D" groups=["Environment"]]
 script = ExtResource("1_vehiw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -14,11 +16,13 @@ script = ExtResource("1_vehiw")
 texture = ExtResource("2_pe4wd")
 
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
-position = Vector2(260, -12)
+position = Vector2(255, -13)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="NpcContainer" type="Node2D" parent="."]
 
 [node name="Npc Destination" type="Marker2D" parent="."]
 position = Vector2(72, 6)
@@ -34,4 +38,13 @@ theme_override_font_sizes/font_size = 25
 text = "Next"
 script = ExtResource("5_gfrxh")
 
+[node name="DialogContainer" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="DialogContainer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogContainer/Area2D"]
+shape = SubResource("CircleShape2D_0ccqd")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="DialogContainer/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="DialogContainer/Area2D" to="." method="_on_area_2d_body_entered"]

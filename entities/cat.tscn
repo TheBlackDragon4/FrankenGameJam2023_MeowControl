@@ -1,16 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://h6l23w155bje"]
 
-[ext_resource type="Texture2D" uid="uid://1apalq4jmsh7" path="res://assets/cat/cat smile.png" id="1_mcdth"]
+[ext_resource type="Texture2D" uid="uid://c54hid6niihr8" path="res://assets/gato_coloured.png" id="1_j45mh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6cr6"]
 size = Vector2(188, 285)
 
-[node name="Cat" type="CharacterBody2D"]
+[node name="Cat" type="CharacterBody2D" groups=["Cat"]]
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_mcdth")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_j45mh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 20.5)
 shape = SubResource("RectangleShape2D_v6cr6")
