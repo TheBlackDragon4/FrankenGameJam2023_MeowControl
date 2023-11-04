@@ -6,14 +6,19 @@
 [node name="testScene" type="Node2D"]
 
 [node name="Test" type="Sprite2D" parent="."]
-position = Vector2(512, 373)
+position = Vector2(476.5, 354.5)
+scale = Vector2(1.95953, 1.56812)
 texture = ExtResource("1_cbhi4")
 
 [node name="MenuButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 829.0
-offset_top = 650.0
-offset_right = 996.0
-offset_bottom = 720.0
+offset_left = 1167.0
+offset_top = 722.0
+offset_right = 1350.0
+offset_bottom = 817.0
+scale = Vector2(0.9922, 1.00462)
 text = "Zurück"
 script = ExtResource("2_ludbt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(478, 355)
