@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdoa0xo7uidex"]
+[gd_scene load_steps=6 format=3 uid="uid://bdoa0xo7uidex"]
 
 [ext_resource type="Script" path="res://night_scene.gd" id="1_nbex0"]
-[ext_resource type="Texture2D" uid="uid://clf7yhfggkct6" path="res://assets/sleeping_cat.jpeg" id="2_5p7no"]
-[ext_resource type="Texture2D" uid="uid://bn8yij6gfyfwa" path="res://assets/room_background.png" id="2_dkmgh"]
+[ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/background_night.png" id="3_hxwy1"]
 [ext_resource type="Texture2D" uid="uid://clh14jesq3k71" path="res://assets/moon_full.png" id="3_xbrxs"]
 [ext_resource type="Texture2D" uid="uid://cchray2aw6yw6" path="res://assets/window_frame.png" id="4_1vrvo"]
 [ext_resource type="Texture2D" uid="uid://dxiq4cotupawv" path="res://assets/windows_night_sky.png" id="5_mn4my"]
@@ -15,35 +14,18 @@ script = ExtResource("1_nbex0")
 
 [node name="Camera2D" type="Camera2D" parent="night_scene"]
 
-[node name="RoomBackground" type="Sprite2D" parent="night_scene"]
-position = Vector2(8, 11)
-scale = Vector2(1.05833, 1.32667)
-texture = ExtResource("2_dkmgh")
-
 [node name="WindowsNightSky" type="Sprite2D" parent="night_scene"]
 position = Vector2(-4.57764e-05, -201.5)
 scale = Vector2(0.775, 0.643333)
 texture = ExtResource("5_mn4my")
 
+[node name="Sprite2D" type="Sprite2D" parent="night_scene"]
+texture = ExtResource("3_hxwy1")
+
 [node name="moon" type="Sprite2D" parent="night_scene"]
-position = Vector2(-779, -3)
+position = Vector2(-784, -80)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_xbrxs")
-
-[node name="RoomBackground_cover3" type="Sprite2D" parent="night_scene"]
-position = Vector2(632, 232)
-scale = Vector2(0.386805, 0.362926)
-texture = ExtResource("2_dkmgh")
-
-[node name="RoomBackground_cover2" type="Sprite2D" parent="night_scene"]
-position = Vector2(856, 8)
-scale = Vector2(0.126736, 0.362926)
-texture = ExtResource("2_dkmgh")
-
-[node name="RoomBackground_cover" type="Sprite2D" parent="night_scene"]
-position = Vector2(-848, -137.875)
-scale = Vector2(0.110417, 0.635833)
-texture = ExtResource("2_dkmgh")
 
 [node name="button_skip" type="Button" parent="night_scene"]
 offset_left = -200.0
@@ -53,12 +35,8 @@ offset_bottom = 516.0
 text = "skip night"
 metadata/_edit_use_anchors_ = true
 
-[node name="sleeping_cat" type="Sprite2D" parent="night_scene"]
-position = Vector2(0.000183105, 272)
-scale = Vector2(1.98, 2.45556)
-texture = ExtResource("2_5p7no")
-
 [node name="WindowFrame" type="Sprite2D" parent="night_scene"]
+visible = false
 position = Vector2(1.90735e-06, -200)
 scale = Vector2(0.775, 0.636667)
 texture = ExtResource("4_1vrvo")
