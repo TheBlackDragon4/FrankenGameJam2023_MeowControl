@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdoa0xo7uidex"]
 
-[ext_resource type="Script" path="res://night_scene.gd" id="1_nbex0"]
-[ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/background_night.png" id="3_hxwy1"]
-[ext_resource type="Texture2D" uid="uid://clh14jesq3k71" path="res://assets/moon_full.png" id="3_xbrxs"]
+[ext_resource type="Script" path="res://scenes/night/night_scene.gd" id="1_4lp2t"]
+[ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/night/background_night.png" id="2_rqpef"]
+[ext_resource type="Texture2D" uid="uid://clh14jesq3k71" path="res://assets/night/moon_full.png" id="3_1bf3n"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gyidn"]
 
@@ -31,17 +31,17 @@ _data = {
 position = Vector2(8, 56)
 
 [node name="night_scene" type="Node" parent="."]
-script = ExtResource("1_nbex0")
+script = ExtResource("1_4lp2t")
 
 [node name="Camera2D" type="Camera2D" parent="night_scene"]
 
 [node name="background" type="Sprite2D" parent="night_scene"]
-texture = ExtResource("3_hxwy1")
+texture = ExtResource("2_rqpef")
 
 [node name="moon" type="Sprite2D" parent="night_scene"]
 position = Vector2(-1008, 48)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_xbrxs")
+texture = ExtResource("3_1bf3n")
 
 [node name="button_skip" type="Button" parent="night_scene"]
 offset_left = -200.0

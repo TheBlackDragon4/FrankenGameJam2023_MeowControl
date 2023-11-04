@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=7 format=3 uid="uid://yhp7g6rm3205"]
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="3_irl6d"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_LEFT_UP.gd" id="4_atbhi"]
 [ext_resource type="Texture2D" uid="uid://bqsopwrcyvhy6" path="res://assets/cat/cat smile.png" id="5_723m0"]
+[ext_resource type="Script" path="res://scenes/control_room/GoToSleep.gd" id="5_dh0yb"]
 [ext_resource type="Script" path="res://scenes/control_room/ButtonNEXTInShopScene.gd" id="6_xrbph"]
 
 [node name="control_room" type="Node2D"]
@@ -70,7 +71,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button9" type="Button" parent="ExampleControlRoom"]
 anchors_preset = -1
-anchor_left = -1.02667
+anchor_left = -1.0272
 anchor_top = -0.735981
 anchor_right = -1.0272
 anchor_bottom = -0.735981
@@ -143,6 +144,7 @@ offset_bottom = 556.0
 scale = Vector2(0.988414, 1.00121)
 theme_override_font_sizes/font_size = 25
 text = "Go to sleep"
+script = ExtResource("5_dh0yb")
 
 [node name="NextButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
