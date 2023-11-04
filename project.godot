@@ -37,3 +37,7 @@ Escape={
 2d_render/layer_7="Hat"
 2d_render/layer_9="Score"
 2d_render/layer_10="Menu"
+
+[physics]
+
+2d/default_gravity=0.0
