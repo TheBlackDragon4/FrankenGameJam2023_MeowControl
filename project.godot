@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="ProjectMeowControl"
+run/main_scene="res://scenes/hat_production.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -18,6 +19,14 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[input]
+
+Click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -28,3 +37,7 @@ window/size/viewport_height=1080
 2d_render/layer_7="Hat"
 2d_render/layer_9="Score"
 2d_render/layer_10="Menu"
+
+[physics]
+
+2d/default_gravity=0.0
