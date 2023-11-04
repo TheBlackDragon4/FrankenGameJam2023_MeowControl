@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dimi7btyc4ueq"]
+[gd_scene load_steps=9 format=3 uid="uid://dimi7btyc4ueq"]
 
 [ext_resource type="Texture2D" uid="uid://dgtwn5gb5yhjw" path="res://assets/background/dhrth.jpg" id="1_gldpp"]
 [ext_resource type="Script" path="res://scenes/menu/Menu.gd" id="2_20wpq"]
 [ext_resource type="Texture2D" uid="uid://b4qxvepa0hdmm" path="res://assets/title.png" id="3_2kf5d"]
+[ext_resource type="AudioStream" uid="uid://brm2j6liw3n2a" path="res://assets/BGM/Title BGM glass-of-wine-143532.mp3" id="4_oqunm"]
 
 [sub_resource type="SystemFont" id="SystemFont_aoynj"]
 font_names = PackedStringArray("Vladimir Script")
@@ -79,6 +80,10 @@ text = "Quit"
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(-620, -170)
 texture = ExtResource("3_2kf5d")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_oqunm")
+autoplay = true
 
 [connection signal="pressed" from="Menu/VBoxContainer/Play" to="Menu" method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Options" to="Menu" method="_on_options_pressed"]

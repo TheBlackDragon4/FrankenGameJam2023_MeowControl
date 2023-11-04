@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://gfhayxqocgpa"]
+[gd_scene load_steps=5 format=3 uid="uid://gfhayxqocgpa"]
 
 [ext_resource type="Texture2D" uid="uid://d08xq5uts1lb8" path="res://assets/background/background-1431052_1920.png" id="1_uxbes"]
 [ext_resource type="Script" path="res://scenes/menu/MarginContainer cred.gd" id="2_58x2e"]
+[ext_resource type="AudioStream" uid="uid://brm2j6liw3n2a" path="res://assets/BGM/Title BGM glass-of-wine-143532.mp3" id="3_hgdx7"]
 
 [sub_resource type="SystemFont" id="SystemFont_5bqhh"]
 font_names = PackedStringArray("Vladimir Script")
@@ -34,5 +35,9 @@ theme_override_constants/outline_size = 3
 theme_override_fonts/font = SubResource("SystemFont_5bqhh")
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hgdx7")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer cred/VBoxContainer/Back" to="MarginContainer cred" method="_on_back_pressed"]
