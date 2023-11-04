@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://gfhayxqocgpa"]
+
+[ext_resource type="Texture2D" uid="uid://d08xq5uts1lb8" path="res://assets/background/background-1431052_1920.png" id="1_asalh"]
+[ext_resource type="Script" path="res://scenes/MarginContainer cred.gd" id="2_m7d2x"]
+
+[sub_resource type="SystemFont" id="SystemFont_5bqhh"]
+font_names = PackedStringArray("Vladimir Script")
+
+[node name="template_credits" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background-14310521920" type="Sprite2D" parent="."]
+position = Vector2(38, -93)
+scale = Vector2(1.06, 1.06)
+texture = ExtResource("1_asalh")
+
+[node name="MarginContainer cred" type="MarginContainer" parent="."]
+offset_left = -88.0
+offset_top = 48.0
+offset_right = 77.28
+offset_bottom = 117.0
+script = ExtResource("2_m7d2x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer cred"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer cred/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0.32549, 0.333333, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0.32549, 0.333333, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_5bqhh")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer cred/VBoxContainer/Back" to="MarginContainer cred" method="_on_back_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtahfkvj0crf"]
+
+[ext_resource type="Texture2D" uid="uid://2thsj34i73wj" path="res://assets/background/hvrtb.jpg" id="1_s2p7m"]
+
+[node name="template" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Hvrtb" type="Sprite2D" parent="."]
+position = Vector2(5, -2)
+scale = Vector2(1.435, 1.435)
+texture = ExtResource("1_s2p7m")
