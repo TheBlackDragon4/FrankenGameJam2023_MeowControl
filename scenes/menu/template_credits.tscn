@@ -39,5 +39,6 @@ text = "Back"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_hgdx7")
 autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="MarginContainer cred/VBoxContainer/Back" to="MarginContainer cred" method="_on_back_pressed"]

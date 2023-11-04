@@ -40,14 +40,16 @@ text = "Back"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_yq43t")
 autoplay = true
+bus = &"BGM"
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="VolSliderMaster" type="HSlider" parent="."]
 offset_left = -167.0
 offset_top = -186.0
 offset_right = 168.0
-offset_bottom = -159.0
-min_value = -30.0
+offset_bottom = -157.245
+min_value = -60.0
 max_value = 0.0
+tick_count = 5
 script = ExtResource("4_d8hto")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="MarginContainer" method="_on_back_pressed"]
