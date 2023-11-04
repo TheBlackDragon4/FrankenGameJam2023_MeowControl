@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r4dbdliam5hh"
-path="res://.godot/imported/shopfront.jpg-ace58f01206352c494f540da342753b5.ctex"
+uid="uid://2thsj34i73wj"
+path="res://.godot/imported/hvrtb.jpg-5a60f21bf104421e06959c67a7aa344d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/shopfront.jpg"
-dest_files=["res://.godot/imported/shopfront.jpg-ace58f01206352c494f540da342753b5.ctex"]
+source_file="res://assets/background/hvrtb.jpg"
+dest_files=["res://.godot/imported/hvrtb.jpg-5a60f21bf104421e06959c67a7aa344d.ctex"]
 
 [params]
 
