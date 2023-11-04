@@ -60,3 +60,10 @@ func _on_create_new_hat_pressed():
 	
 	
 	
+
+
+func _on_back_to_optimization_pressed():
+	##changes scene to optimization
+	
+	get_tree().change_scene_to_file("res://scenes/optimization.tscn")
+	

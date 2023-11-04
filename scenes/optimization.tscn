@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://1mmfq1hajfbx"]
+
+[ext_resource type="Script" path="res://scenes/scripts/optimization.gd" id="1_dwooy"]
+[ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/background_white.png" id="2_vkxwr"]
+[ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/background_hat_building.jpeg" id="3_yfxi5"]
+
+[node name="Optimization" type="Node2D"]
+script = ExtResource("1_dwooy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("2_vkxwr")
+
+[node name="create_hat" type="Sprite2D" parent="."]
+position = Vector2(-536, -256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_yfxi5")
+
+[node name="create_hat2" type="Button" parent="."]
+offset_left = -720.0
+offset_top = -24.0
+offset_right = -384.0
+offset_bottom = 93.0
+text = "Create hats"
+
+[connection signal="pressed" from="create_hat2" to="." method="_on_create_hat_2_pressed"]

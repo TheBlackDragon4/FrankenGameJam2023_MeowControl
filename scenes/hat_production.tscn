@@ -233,8 +233,16 @@ visible = false
 position = Vector2(801, 385)
 scale = Vector2(0.5, 0.5)
 
+[node name="back_to_optimization" type="Button" parent="."]
+offset_left = -756.0
+offset_top = 409.0
+offset_right = -488.0
+offset_bottom = 480.0
+text = "Go Back"
+
 [connection signal="pressed" from="hat_type_picker/type_go_right" to="hat_type_picker" method="_on_type_go_right_pressed"]
 [connection signal="pressed" from="hat_type_picker/type_go_left" to="hat_type_picker" method="_on_type_go_left_pressed"]
 [connection signal="pressed" from="hat_color_picker/color_go_right" to="hat_color_picker" method="_on_color_go_right_pressed"]
 [connection signal="pressed" from="hat_color_picker/color_go_left" to="hat_color_picker" method="_on_color_go_left_pressed"]
 [connection signal="pressed" from="new_hat/create_new_hat" to="." method="_on_create_new_hat_pressed"]
+[connection signal="pressed" from="back_to_optimization" to="." method="_on_back_to_optimization_pressed"]
