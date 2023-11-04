@@ -14,5 +14,9 @@ func _process(delta):
 func _on_timer_timeout():
 	var n = npc.instantiate()
 	n.position = Vector2(-716, 6)
-	add_child(n)
+	$NpcContainer.add_child(n)
 	$Timer.stop()
+	
+	
+func _on_area_2d_body_entered(body):
+	DialogueManager.show_example_dialogue_balloon(load("res://dialog/template.dialogue"), "welcome_customer")

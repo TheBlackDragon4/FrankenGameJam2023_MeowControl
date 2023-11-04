@@ -1,20 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bj0t2elojjhm7"]
 
-[ext_resource type="Texture2D" uid="uid://d3d8b8gdhbvnf" path="res://icon.svg" id="1_un6ro"]
 [ext_resource type="Script" path="res://entities/npc.gd" id="1_yfrev"]
+[ext_resource type="Texture2D" uid="uid://bhovnr36badxc" path="res://assets/20231104_194420.jpg" id="2_h72tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5uq"]
 size = Vector2(128, 128)
 
-[node name="Npc" type="CharacterBody2D"]
+[node name="Npc" type="CharacterBody2D" groups=["Npc"]]
 scale = Vector2(1.03075, 2.25718)
 script = ExtResource("1_yfrev")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_un6ro")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_h72tj")
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_xn5uq")
