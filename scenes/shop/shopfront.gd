@@ -47,15 +47,15 @@ func _on_area_2d_body_entered(body):
 	DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")
 
 func _show_hat_1():
-	$Hat.texture = load(hat_path+str(GameState.hat_inventory[0])+".png")
+	$Hat.texture = load(hat_path+str(GameState.hat_inventory[0]/10)+str(GameState.hat_inventory[0]%10)+".png")
 	$Hat.show()
 	
 func _show_hat_2():
-	$Hat.texture = load(hat_path+str(GameState.hat_inventory[1])+".png")
+	$Hat.texture = load(hat_path+str(GameState.hat_inventory[1]/10)+str(GameState.hat_inventory[1]%10)+".png")
 	$Hat.show()
 	
 func _show_hat_3():
-	$Hat.texture = load(hat_path+str(GameState.hat_inventory[2])+".png")
+	$Hat.texture = load(hat_path+str(GameState.hat_inventory[2]/10)+str(GameState.hat_inventory[2]%10)+".png")
 	$Hat.show()
 
 func _hide_hat():

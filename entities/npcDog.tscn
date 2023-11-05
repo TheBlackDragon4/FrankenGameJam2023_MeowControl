@@ -34,9 +34,10 @@ collision_layer = 2
 script = ExtResource("1_oxqaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.078, 0.078)
+position = Vector2(-0.970177, 0)
+scale = Vector2(0.175045, 0.078)
 sprite_frames = SubResource("SpriteFrames_cc27g")
-frame_progress = 0.550268
+frame_progress = 0.668725
 
 [node name="Timer" type="Timer" parent="."]
 
