@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvhcu2ftgcaio"]
+[gd_scene load_steps=3 format=3 uid="uid://ckmc6qcb3bcqd"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_7ftvv"]
 [ext_resource type="Texture2D" uid="uid://qx1t1wx018qe" path="res://scenes/Intro/pngtree-isolated-cat-on-white-background-png-image_7094927.png" id="2_6c7r3"]
@@ -10,7 +10,7 @@ script = ExtResource("1_7ftvv")
 texture = ExtResource("2_6c7r3")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 11.0
+wait_time = 15.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

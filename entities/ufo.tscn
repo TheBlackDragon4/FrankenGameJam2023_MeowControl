@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b38p4r40u5v8i"]
+[gd_scene load_steps=7 format=3 uid="uid://cfrrm5yufyeo6"]
 
 [ext_resource type="Script" path="res://entities/ufo.gd" id="1_1u2eu"]
 [ext_resource type="Texture2D" uid="uid://cpf0fmdiimjwb" path="res://scenes/Intro/spritesheet_ufo.png" id="2_lefit"]

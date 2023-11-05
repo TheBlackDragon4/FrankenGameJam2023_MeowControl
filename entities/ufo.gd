@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 300
+@export var speed = 200
 
 var destination
 var distance
@@ -31,8 +31,8 @@ func _process(delta):
 	
 	if goAway == true:
 		move_and_collide(enddirection * speed * delta)
-		if enddistance < 1:
-			queue_free()
+#		if enddistance < 1:
+#			queue_free()
 
 func _on_timer_timeout():
 	goAway = true
