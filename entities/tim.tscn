@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtnmwwo2fob7n"]
+
+[ext_resource type="Script" path="res://entities/tim.gd" id="1_qhduy"]
+[ext_resource type="Texture2D" uid="uid://dibn3mr1rurf2" path="res://scenes/Intro/debawku-ea49a435-779e-4b6f-9045-0d067b9f6837.png" id="2_urg2p"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_qhduy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_urg2p")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
