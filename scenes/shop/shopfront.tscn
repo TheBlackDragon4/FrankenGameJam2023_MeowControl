@@ -19,7 +19,6 @@ texture = ExtResource("2_pe4wd")
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
 position = Vector2(255, -13)
 
-
 [node name="NpcSpawner" type="Timer" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
