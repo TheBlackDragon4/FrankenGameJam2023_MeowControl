@@ -403,6 +403,11 @@ offset_right = 932.0
 offset_bottom = 500.0
 text = "Next"
 
+[node name="AcceptDialog_no_hat_in_inv" type="AcceptDialog" parent="."]
+initial_position = 1
+size = Vector2i(384, 100)
+dialog_text = "you must add at least one hat to your inventory"
+
 [connection signal="pressed" from="hat_type_picker/type_go_right" to="." method="_on_type_go_right_pressed"]
 [connection signal="pressed" from="hat_type_picker/type_go_left" to="." method="_on_type_go_left_pressed"]
 [connection signal="pressed" from="hat_color_picker/color_go_right" to="." method="_on_color_go_right_pressed"]
