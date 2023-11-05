@@ -1,5 +1,10 @@
 extends Node
 
+signal customer_done
+signal start_dialog
+signal show_hat_1
+signal show_hat_2
+signal show_hat_3
 
 signal customer_done
 signal start_dialog

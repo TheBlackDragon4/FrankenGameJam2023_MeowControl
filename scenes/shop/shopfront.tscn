@@ -21,6 +21,7 @@ position = Vector2(255, -13)
 
 [node name="NpcSpawner" type="Timer" parent="."]
 
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
