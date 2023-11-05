@@ -1,13 +1,18 @@
-~ this_is_a_node_title
+~ welcome_customer
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Sir Gato: [[Good Meowning!|Greetings and salutations.|Welcome welcome!|Welcome to my humble claw-ters.]]
+Sir Gato: [[I am Sir Gato, how may I help?|How are you feline today?|How may I help?|Pleased to have meow.|Pleased to have you.]]
 
-=> END
+NPC: [[Hi.|Hello.|Howdy!|Yo!|Yoooo!| Yo yo yo!]] 
+NPC: [[I am looking for a hat.|Imma need a hat man!|I would like to purchase a hat, Sir Gato. |I would like to purchase a hat. |I came to buy a hat - I heard Sir Gato is the best!|Could you help me pick a hat?]]
+
+Sir Gato: Sir Gato: [[It's good you came then.|I feel honoured you came to me with this request.]]
+Sir Gato: [[Meow or Never!|The time to get a hat is meow.|Meow is the best time to get a good hat.|Meow is your time to get a hat.|You don’t own a hat? Oh my, that’s cat-astrophic!|The impawtence of a good hat is not to be underestimated.|A good hat is like a friend for life – you see this is impawtant!]]
+
+if has_hat == true
+	Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like it.
+	set has_hat = false
+else
+	Sir Gato: Sadly, I don't have the pawfect hat for you. 
+	do emit("customer_done")
+	=> END!
