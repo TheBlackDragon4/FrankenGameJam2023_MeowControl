@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://bf3qo7lkfvui"]
+[gd_scene load_steps=2 format=3 uid="uid://bf3qo7lkfvui"]
+
+[ext_resource type="Texture2D" uid="uid://c5pa6jafc7cps" path="res://scenes/MiniGame/Meow-Knight_Idle.png" id="1_jc242"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_jc242")
+vframes = 9

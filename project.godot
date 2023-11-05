@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ProjectMeowControl"
-run/main_scene="res://scenes/menu/menu.tscn"
+run/main_scene="res://scenes/MiniGame/Minigame.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -37,3 +37,7 @@ Escape={
 2d_render/layer_7="Hat"
 2d_render/layer_9="Score"
 2d_render/layer_10="Menu"
+
+[physics]
+
+2d/default_gravity=0.0
