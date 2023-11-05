@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=22 format=3 uid="uid://yhp7g6rm3205"]
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
 [ext_resource type="Texture2D" uid="uid://b235v7sjusaln" path="res://assets/background/information_research/speakingPeople_china_Background.jpg" id="2_i1okl"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_0.gd" id="3_24lfx"]
 [ext_resource type="Texture2D" uid="uid://48fd66e51wr4" path="res://assets/background/information_research/speakingPeople_marketplace_Background.jpg" id="4_l8uoj"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_1.gd" id="5_83j5i"]
-[ext_resource type="Texture2D" uid="uid://bqsopwrcyvhy6" path="res://assets/cat/cat smile.png" id="5_723m0"]
 [ext_resource type="Script" path="res://scenes/control_room/GoToSleep.gd" id="5_dh0yb"]
 [ext_resource type="Texture2D" uid="uid://bdga0je0gsk6l" path="res://assets/background/information_research/speakingPeople_marketplace_Background1.jpg" id="6_i4a5e"]
 [ext_resource type="Script" path="res://scenes/control_room/ButtonNEXTInShopScene.gd" id="6_xrbph"]
@@ -206,12 +205,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(120, 40)
 rotation = 3.14159
 scale = Vector2(2430.78, -166.455)
-
-[node name="CatSmile" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(151, 120)
-scale = Vector2(0.702381, 0.715278)
-texture = ExtResource("5_723m0")
 
 [node name="GoToSleep" type="MenuButton" parent="."]
 visible = false

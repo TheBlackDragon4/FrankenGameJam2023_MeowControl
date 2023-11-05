@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
-[ext_resource type="Texture2D" uid="uid://dr0dvtacwu1uu" path="res://assets/hats/hat_00.png" id="5_5pap4"]
+[ext_resource type="Texture2D" uid="uid://d1tww12lxdotk" path="res://assets/hats/hat_05.png" id="5_1hph3"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 [ext_resource type="AudioStream" uid="uid://c8up18jpljbq6" path="res://assets/BGM/shop Ludum Dare 38 - Track 1.wav" id="6_daykk"]
 
@@ -50,9 +50,10 @@ shape = SubResource("CircleShape2D_a8x8p")
 
 [node name="Hat" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(97.25, -270.75)
-scale = Vector2(0.5, 0.655)
-texture = ExtResource("5_5pap4")
+modulate = Color(1, 1, 1, 0.521569)
+position = Vector2(-2, -242)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_1hph3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_daykk")

@@ -5,6 +5,7 @@ signal start_dialog
 signal show_hat_1
 signal show_hat_2
 signal show_hat_3
+signal change_scene
 
 var has_hat = false
 var hat_inventory = [null,null,null] #int array for the hats in the players inventory, one int value defines the ID of the hat
