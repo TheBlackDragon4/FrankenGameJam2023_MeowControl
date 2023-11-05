@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://de421dxllg256"]
+[gd_scene load_steps=11 format=3 uid="uid://de421dxllg256"]
 
 [ext_resource type="Script" path="res://scenes/optimization/scripts/hat_production.gd" id="1_es8tx"]
 [ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/optimization/background_white.png" id="1_n87me"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://diqdfir6u5wcs" path="res://assets/optimization/card_slot_empty.png" id="4_0iuka"]
 [ext_resource type="Texture2D" uid="uid://b6jhsfi02npyy" path="res://assets/hats/hat_06.png" id="5_8wgs2"]
 [ext_resource type="Texture2D" uid="uid://bbix4cpisg8rn" path="res://assets/optimization/hat_color/color_0.png" id="7_scfqa"]
+[ext_resource type="AudioStream" uid="uid://bmh5ruunk51j7" path="res://assets/BGM/craft Patreon Goal Reward Loops - Track 02.wav" id="8_qsxg7"]
 
 [sub_resource type="GDScript" id="GDScript_sh8du"]
 script/source = "extends Node2D
@@ -401,6 +402,10 @@ offset_top = 409.0
 offset_right = -488.0
 offset_bottom = 480.0
 text = "Go Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_qsxg7")
+autoplay = true
 
 [connection signal="pressed" from="hat_type_picker/type_go_right" to="." method="_on_type_go_right_pressed"]
 [connection signal="pressed" from="hat_type_picker/type_go_left" to="." method="_on_type_go_left_pressed"]

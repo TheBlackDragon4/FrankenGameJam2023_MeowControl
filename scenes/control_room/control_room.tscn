@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=24 format=3 uid="uid://yhp7g6rm3205"]
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
 [ext_resource type="Texture2D" uid="uid://b235v7sjusaln" path="res://assets/background/information_research/speakingPeople_china_Background.jpg" id="2_i1okl"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://iyup06gvqgku" path="res://assets/background/information_research/speakingPeople_church_Background.jpg" id="16_p7rkc"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_2.gd" id="17_2tjen"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_3.gd" id="19_t7oov"]
+[ext_resource type="AudioStream" uid="uid://cj7rrotrq4hc" path="res://assets/BGM/info Patreon Goal Reward Loops - Track 03.wav" id="23_yswq6"]
 
 [node name="control_room" type="Node2D"]
 
@@ -232,3 +233,7 @@ scale = Vector2(0.9922, 1.00462)
 theme_override_font_sizes/font_size = 25
 text = "Next"
 script = ExtResource("6_xrbph")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_yswq6")
+autoplay = true
