@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn8ujt2tn25oi"]
+[gd_scene load_steps=3 format=3 uid="uid://d0j4rl30orl5e"]
 
 [ext_resource type="Script" path="res://entities/ufo.gd" id="1_1u2eu"]
-[ext_resource type="Texture2D" uid="uid://hqhpqmht4kde" path="res://scenes/Intro/bddfc93e9029274b3b6a188f3147a42a.png" id="2_aor44"]
+[ext_resource type="Texture2D" uid="uid://dhqljdpp27kdt" path="res://scenes/Intro/opening_scene_ufo.png" id="2_nmpf4"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_1u2eu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_aor44")
+texture = ExtResource("2_nmpf4")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

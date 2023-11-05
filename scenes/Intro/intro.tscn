@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cp8hn10n1g3bm"]
 
 [ext_resource type="Texture2D" uid="uid://bqtud16g0httd" path="res://assets/background/nature-forest-landscape-night-scene_1308-60557.jpg" id="1_2w35n"]
-[ext_resource type="PackedScene" uid="uid://cvhcu2ftgcaio" path="res://entities/cat2.tscn" id="1_psaak"]
-[ext_resource type="PackedScene" uid="uid://dn8ujt2tn25oi" path="res://entities/ufo.tscn" id="1_puoih"]
+[ext_resource type="PackedScene" path="res://entities/cat2.tscn" id="1_psaak"]
+[ext_resource type="PackedScene" uid="uid://d0j4rl30orl5e" path="res://entities/ufo.tscn" id="1_puoih"]
 [ext_resource type="Script" path="res://scenes/Intro/intro.gd" id="1_xw7ws"]
-[ext_resource type="PackedScene" uid="uid://dtnmwwo2fob7n" path="res://entities/tim.tscn" id="2_axgmd"]
+[ext_resource type="PackedScene" path="res://entities/tim.tscn" id="2_axgmd"]
 [ext_resource type="Texture2D" uid="uid://dogwlbpqs1f2l" path="res://scenes/Intro/beam.png" id="5_tb04q"]
 [ext_resource type="AudioStream" uid="uid://ddnmtlpce1wc0" path="res://assets/BGM/info upgrade Ludum Dare 38 - Track 10.wav" id="7_gcjvc"]
 
@@ -44,7 +44,8 @@ scale = Vector2(3.26523, 2.6875)
 texture = ExtResource("5_tb04q")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_puoih")]
-position = Vector2(-1610, -360)
+position = Vector2(-1626, -340)
+scale = Vector2(0.545, 0.545)
 
 [node name="Beam2" type="Timer" parent="."]
 wait_time = 7.0
