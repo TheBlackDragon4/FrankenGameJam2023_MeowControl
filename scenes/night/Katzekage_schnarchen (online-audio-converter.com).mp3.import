@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db28g57tfeh02"
+path="res://.godot/imported/Katzekage_schnarchen (online-audio-converter.com).mp3-9891b416775dd0fd39d774946439f1c6.mp3str"
+
+[deps]
+
+source_file="res://scenes/night/Katzekage_schnarchen (online-audio-converter.com).mp3"
+dest_files=["res://.godot/imported/Katzekage_schnarchen (online-audio-converter.com).mp3-9891b416775dd0fd39d774946439f1c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
