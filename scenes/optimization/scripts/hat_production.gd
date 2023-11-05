@@ -41,7 +41,7 @@ func _on_back_to_optimization_pressed():
 
 func _on_type_go_right_pressed():
 	
-	if type_counter < 7:
+	if type_counter < 4:
 		type_counter+=1
 	else:
 		type_counter = 0
@@ -53,7 +53,7 @@ func _on_type_go_left_pressed():
 	if type_counter > 0:
 		type_counter-= 1
 	else:
-		type_counter = 7
+		type_counter = 4
 	
 	$hat_type_picker/hat_type_1.texture = load(hat_path+str(type_counter) + "6" + ".png")
 
