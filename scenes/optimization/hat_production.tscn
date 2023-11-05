@@ -1,27 +1,257 @@
-[gd_scene load_steps=23 format=3 uid="uid://de421dxllg256"]
+[gd_scene load_steps=9 format=3 uid="uid://de421dxllg256"]
 
 [ext_resource type="Script" path="res://scenes/optimization/scripts/hat_production.gd" id="1_es8tx"]
 [ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/optimization/background_white.png" id="1_n87me"]
 [ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/optimization/background_hat_building.jpeg" id="2_qcqo5"]
-[ext_resource type="Script" path="res://scenes/optimization/scripts/hat_type_picker.gd" id="3_qfi3k"]
 [ext_resource type="Texture2D" uid="uid://diqdfir6u5wcs" path="res://assets/optimization/card_slot_empty.png" id="4_0iuka"]
-[ext_resource type="Texture2D" uid="uid://blq0he3i16br0" path="res://assets/optimization/hat_type/hat_1.png" id="5_0x4wv"]
-[ext_resource type="Texture2D" uid="uid://cejuo2wjtx5ao" path="res://assets/optimization/hat_type/hat_2.png" id="6_ga6fs"]
-[ext_resource type="Texture2D" uid="uid://cbnmbjdkhi73y" path="res://assets/optimization/hat_type/hat_3.png" id="7_g4k6k"]
-[ext_resource type="Texture2D" uid="uid://dyiiqb2af7dyd" path="res://assets/optimization/hat_type/hat_4.png" id="8_yx8bv"]
-[ext_resource type="Texture2D" uid="uid://b6nuyypni6x6i" path="res://assets/optimization/hat_type/hat_5.png" id="9_cb2vp"]
-[ext_resource type="Texture2D" uid="uid://dewllqflwq0ej" path="res://assets/optimization/hat_type/hat_6.png" id="10_mr70y"]
-[ext_resource type="Texture2D" uid="uid://cqdxqhxa3dj0j" path="res://assets/optimization/hat_type/hat_7.png" id="11_oa0t4"]
-[ext_resource type="Texture2D" uid="uid://bkldl0xmi7r1w" path="res://assets/optimization/hat_type/hat_8.png" id="12_dmrev"]
-[ext_resource type="Script" path="res://scenes/optimization/scripts/hat_color_picker.gd" id="13_2dpv8"]
-[ext_resource type="Texture2D" uid="uid://dk8sqkm50jbqh" path="res://assets/optimization/hat_color/hat_black.png" id="13_e85kt"]
-[ext_resource type="Texture2D" uid="uid://dbg25afgy2f8r" path="res://assets/optimization/hat_color/hat_blue.png" id="14_0no8r"]
-[ext_resource type="Texture2D" uid="uid://bt24nowjb06a7" path="res://assets/optimization/hat_color/hat_green.png" id="15_063sg"]
-[ext_resource type="Texture2D" uid="uid://lckxoh06novl" path="res://assets/optimization/hat_color/hat_orange.png" id="16_j4c5p"]
-[ext_resource type="Texture2D" uid="uid://bu6j78gyfvf63" path="res://assets/optimization/hat_color/hat_purple.png" id="17_w6eq0"]
-[ext_resource type="Texture2D" uid="uid://ci7esdakeehkq" path="res://assets/optimization/hat_color/hat_red.png" id="18_xqdte"]
-[ext_resource type="Texture2D" uid="uid://b6fkrhh87ckvr" path="res://assets/optimization/hat_color/hat_yellow.png" id="19_p5xlb"]
-[ext_resource type="Texture2D" uid="uid://230iglojqj7k" path="res://assets/optimization/hat_color/hat_white.png" id="20_76il1"]
+[ext_resource type="Texture2D" uid="uid://dhcn3qb8scfyv" path="res://assets/hats/hat_06.jpeg" id="6_p6lyp"]
+[ext_resource type="Texture2D" uid="uid://bbix4cpisg8rn" path="res://assets/optimization/hat_color/color_0.png" id="7_scfqa"]
+
+[sub_resource type="GDScript" id="GDScript_sh8du"]
+script/source = "extends Node2D
+
+var type_counter = 0
+
+ #counter for the currently selected type
+var hat_path = \"res://assets/hats/hat_\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+
+
+
+func _on_type_go_right_pressed():
+	
+	
+	type_counter+=1
+	
+	#hat_path += str(type_counter) + \"6\" + \".jpeg\"
+	$hat_type_1.texture = load(hat_path+str(type_counter) + \"6\" + \".jpeg\")
+	
+	
+	
+	##button displays the next type to the right
+#
+#	#hide currently displayed type
+#	if type_counter == 1: 
+#		$hat_type_1.hide()
+#		type_counter += 1
+#	elif type_counter == 2:
+#		$hat_type_2.hide()
+#		type_counter += 1
+#	elif type_counter == 3:
+#		$hat_type_3.hide()
+#		type_counter += 1
+#	elif type_counter == 4:
+#		$hat_type_4.hide()
+#		type_counter += 1
+#	elif type_counter == 5:
+#		$hat_type_5.hide()
+#		type_counter += 1
+#	elif type_counter == 6:
+#		$hat_type_6.hide()
+#		type_counter += 1
+#	elif type_counter == 7:
+#		$hat_type_7.hide()
+#		type_counter += 1
+#	elif type_counter == 8:
+#		$hat_type_8.hide()
+#		type_counter = 1
+#
+#	#show next type
+#	if type_counter == 1:  
+#		$hat_type_1.show()
+#	elif type_counter == 2:
+#		$hat_type_2.show()
+#	elif type_counter == 3:
+#		$hat_type_3.show()
+#	elif type_counter == 4:
+#		$hat_type_4.show()
+#	elif type_counter == 5:
+#		$hat_type_5.show()
+#	elif type_counter == 6:
+#		$hat_type_6.show()
+#	elif type_counter == 7:
+#		$hat_type_7.show()
+#	elif type_counter == 8:
+#		$hat_type_8.show()
+
+
+func _on_type_go_left_pressed():
+	
+	##button displays the next type to the right
+	type_counter-=1
+	
+	#hat_path += str(type_counter) + \"6\" + \".jpeg\"
+	$hat_type_1.texture = load(hat_path+str(type_counter) + \"6\" + \".jpeg\")
+	
+	
+	#hide currently displayed type
+#	if type_counter == 1:
+#		$hat_type_1.hide()
+#		type_counter = 8
+#	elif type_counter == 2:
+#		$hat_type_2.hide()
+#		type_counter -= 1
+#	elif type_counter == 3:
+#		$hat_type_3.hide()
+#		type_counter -= 1
+#	elif type_counter == 4:
+#		$hat_type_4.hide()
+#		type_counter -= 1
+#	elif type_counter == 5:
+#		$hat_type_5.hide()
+#		type_counter -= 1
+#	elif type_counter == 6:
+#		$hat_type_6.hide()
+#		type_counter -= 1
+#	elif type_counter == 7:
+#		$hat_type_7.hide()
+#		type_counter -= 1
+#	elif type_counter == 8:
+#		$hat_type_8.hide()
+#		type_counter -= 1
+#
+#	#show next type
+#	if type_counter == 1:
+#		$hat_type_1.show()
+#	elif type_counter == 2:
+#		$hat_type_2.show()
+#	elif type_counter == 3:
+#		$hat_type_3.show()
+#	elif type_counter == 4:
+#		$hat_type_4.show()
+#	elif type_counter == 5:
+#		$hat_type_5.show()
+#	elif type_counter == 6:
+#		$hat_type_6.show()
+#	elif type_counter == 7:
+#		$hat_type_7.show()
+#	elif type_counter == 8:
+#		$hat_type_8.show()
+"
+
+[sub_resource type="GDScript" id="GDScript_hj2yo"]
+script/source = "extends Node2D
+
+var color_counter = 1 #counter for the currently selected color
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_color_go_right_pressed(): 
+	##button displays the next color to the right
+	
+	#hide currently displayed color
+	if color_counter == 1:
+		$hat_color_1.hide()
+		color_counter += 1
+	elif color_counter == 2:
+		$hat_color_2.hide()
+		color_counter += 1
+	elif color_counter == 3:
+		$hat_color_3.hide()
+		color_counter += 1
+	elif color_counter == 4:
+		$hat_color_4.hide()
+		color_counter += 1
+	elif color_counter == 5:
+		$hat_color_5.hide()
+		color_counter += 1
+	elif color_counter == 6:
+		$hat_color_6.hide()
+		color_counter += 1
+	elif color_counter == 7:
+		$hat_color_7.hide()
+		color_counter += 1
+	elif color_counter == 8:
+		$hat_color_8.hide()
+		color_counter = 1
+	
+	
+	#show next color
+	if color_counter == 1: 
+		$hat_color_1.show()
+	elif color_counter == 2:
+		$hat_color_2.show()
+	elif color_counter == 3:
+		$hat_color_3.show()
+	elif color_counter == 4:
+		$hat_color_4.show()
+	elif color_counter == 5:
+		$hat_color_5.show()
+	elif color_counter == 6:
+		$hat_color_6.show()
+	elif color_counter == 7:
+		$hat_color_7.show()
+	elif color_counter == 8:
+		$hat_color_8.show()
+
+func _on_color_go_left_pressed():
+	##button displays the next color to the left
+	
+	#hide currently displayed color
+	if color_counter == 1:
+		$hat_color_1.hide()
+		color_counter = 8
+	elif color_counter == 2:
+		$hat_color_2.hide()
+		color_counter -= 1
+	elif color_counter == 3:
+		$hat_color_3.hide()
+		color_counter -= 1
+	elif color_counter == 4:
+		$hat_color_4.hide()
+		color_counter -= 1
+	elif color_counter == 5:
+		$hat_color_5.hide()
+		color_counter -= 1
+	elif color_counter == 6:
+		$hat_color_6.hide()
+		color_counter -= 1
+	elif color_counter == 7:
+		$hat_color_7.hide()
+		color_counter -= 1
+	elif color_counter == 8:
+		$hat_color_8.hide()
+		color_counter -= 1
+	
+	#show next color
+	if color_counter == 1:
+		$hat_color_1.show()
+	elif color_counter == 2:
+		$hat_color_2.show()
+	elif color_counter == 3:
+		$hat_color_3.show()
+	elif color_counter == 4:
+		$hat_color_4.show()
+	elif color_counter == 5:
+		$hat_color_5.show()
+	elif color_counter == 6:
+		$hat_color_6.show()
+	elif color_counter == 7:
+		$hat_color_7.show()
+	elif color_counter == 8:
+		$hat_color_8.show()
+"
 
 [node name="hat_production" type="Node2D"]
 script = ExtResource("1_es8tx")
@@ -38,7 +268,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_qcqo5")
 
 [node name="hat_type_picker" type="Node2D" parent="."]
-script = ExtResource("3_qfi3k")
+script = SubResource("GDScript_sh8du")
+
+[node name="hat_type_1" type="Sprite2D" parent="hat_type_picker"]
+position = Vector2(-539, -369)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_p6lyp")
 
 [node name="hat_type" type="Sprite2D" parent="hat_type_picker"]
 position = Vector2(-539, -369)
@@ -59,55 +294,13 @@ offset_right = -653.0
 offset_bottom = -332.0
 text = "<"
 
-[node name="hat_type_1" type="Sprite2D" parent="hat_type_picker"]
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_0x4wv")
-
-[node name="hat_type_2" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_ga6fs")
-
-[node name="hat_type_3" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_g4k6k")
-
-[node name="hat_type_4" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_yx8bv")
-
-[node name="hat_type_5" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_cb2vp")
-
-[node name="hat_type_6" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_mr70y")
-
-[node name="hat_type_7" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_oa0t4")
-
-[node name="hat_type_8" type="Sprite2D" parent="hat_type_picker"]
-visible = false
-position = Vector2(-539, -369)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_dmrev")
-
 [node name="hat_color_picker" type="Node2D" parent="."]
-script = ExtResource("13_2dpv8")
+script = SubResource("GDScript_hj2yo")
+
+[node name="hat_color_1" type="Sprite2D" parent="hat_color_picker"]
+position = Vector2(-538, -148)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_scfqa")
 
 [node name="hat_color" type="Sprite2D" parent="hat_color_picker"]
 position = Vector2(-538, -148)
@@ -128,71 +321,16 @@ offset_right = -648.0
 offset_bottom = -104.0
 text = "<"
 
-[node name="hat_color_1" type="Sprite2D" parent="hat_color_picker"]
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_e85kt")
-
-[node name="hat_color_2" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("14_0no8r")
-
-[node name="hat_color_3" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("15_063sg")
-
-[node name="hat_color_4" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("16_j4c5p")
-
-[node name="hat_color_5" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("17_w6eq0")
-
-[node name="hat_color_6" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("18_xqdte")
-
-[node name="hat_color_7" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("19_p5xlb")
-
-[node name="hat_color_8" type="Sprite2D" parent="hat_color_picker"]
-visible = false
-position = Vector2(-538, -148)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("20_76il1")
-
 [node name="new_hat" type="Node2D" parent="."]
+
+[node name="new_hat_1" type="Sprite2D" parent="new_hat"]
+position = Vector2(-538, 133)
+scale = Vector2(0.5, 0.5)
 
 [node name="new_hat" type="Sprite2D" parent="new_hat"]
 position = Vector2(-538, 133)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_0iuka")
-
-[node name="new_hat_color" type="Sprite2D" parent="new_hat"]
-visible = false
-position = Vector2(-538, 133)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_e85kt")
-
-[node name="new_hat_type" type="Sprite2D" parent="new_hat"]
-visible = false
-position = Vector2(-538, 133)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_0x4wv")
 
 [node name="create_new_hat" type="Button" parent="new_hat"]
 offset_left = -637.0
@@ -203,35 +341,53 @@ text = "create"
 
 [node name="hat_storage" type="Node2D" parent="."]
 
-[node name="storage_space_1" type="Sprite2D" parent="hat_storage"]
-position = Vector2(143, 390)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_0iuka")
-
 [node name="storage_space_1_sprite" type="Sprite2D" parent="hat_storage"]
-visible = false
-position = Vector2(143, 390)
+position = Vector2(143, 131)
 scale = Vector2(0.5, 0.5)
-
-[node name="storage_space_2" type="Sprite2D" parent="hat_storage"]
-position = Vector2(479, 393)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_0iuka")
 
 [node name="storage_space_2_sprite" type="Sprite2D" parent="hat_storage"]
-visible = false
-position = Vector2(479, 393)
+position = Vector2(479, 135)
 scale = Vector2(0.5, 0.5)
 
-[node name="storage_space_3" type="Sprite2D" parent="hat_storage"]
-position = Vector2(801, 385)
+[node name="storage_space_3_sprite" type="Sprite2D" parent="hat_storage"]
+position = Vector2(801, 142)
+scale = Vector2(0.5, 0.5)
+
+[node name="storage_space_1" type="Sprite2D" parent="hat_storage"]
+position = Vector2(143, 131)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_0iuka")
 
-[node name="storage_space_3_sprite" type="Sprite2D" parent="hat_storage"]
-visible = false
-position = Vector2(801, 385)
+[node name="storage_space_2" type="Sprite2D" parent="hat_storage"]
+position = Vector2(479, 135)
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="storage_space_3" type="Sprite2D" parent="hat_storage"]
+position = Vector2(801, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0iuka")
+
+[node name="store_1" type="Button" parent="hat_storage"]
+offset_left = 40.0
+offset_top = 257.0
+offset_right = 245.0
+offset_bottom = 288.0
+text = "store here"
+
+[node name="store_2" type="Button" parent="hat_storage"]
+offset_left = 376.0
+offset_top = 257.0
+offset_right = 581.0
+offset_bottom = 288.0
+text = "store here"
+
+[node name="store_3" type="Button" parent="hat_storage"]
+offset_left = 697.0
+offset_top = 257.0
+offset_right = 902.0
+offset_bottom = 288.0
+text = "store here"
 
 [node name="back_to_optimization" type="Button" parent="."]
 offset_left = -756.0
@@ -240,9 +396,12 @@ offset_right = -488.0
 offset_bottom = 480.0
 text = "Go Back"
 
-[connection signal="pressed" from="hat_type_picker/type_go_right" to="hat_type_picker" method="_on_type_go_right_pressed"]
-[connection signal="pressed" from="hat_type_picker/type_go_left" to="hat_type_picker" method="_on_type_go_left_pressed"]
-[connection signal="pressed" from="hat_color_picker/color_go_right" to="hat_color_picker" method="_on_color_go_right_pressed"]
-[connection signal="pressed" from="hat_color_picker/color_go_left" to="hat_color_picker" method="_on_color_go_left_pressed"]
+[connection signal="pressed" from="hat_type_picker/type_go_right" to="." method="_on_type_go_right_pressed"]
+[connection signal="pressed" from="hat_type_picker/type_go_left" to="." method="_on_type_go_left_pressed"]
+[connection signal="pressed" from="hat_color_picker/color_go_right" to="." method="_on_color_go_right_pressed"]
+[connection signal="pressed" from="hat_color_picker/color_go_left" to="." method="_on_color_go_left_pressed"]
 [connection signal="pressed" from="new_hat/create_new_hat" to="." method="_on_create_new_hat_pressed"]
+[connection signal="pressed" from="hat_storage/store_1" to="." method="_on_store_1_pressed"]
+[connection signal="pressed" from="hat_storage/store_2" to="." method="_on_store_2_pressed"]
+[connection signal="pressed" from="hat_storage/store_3" to="." method="_on_store_3_pressed"]
 [connection signal="pressed" from="back_to_optimization" to="." method="_on_back_to_optimization_pressed"]
