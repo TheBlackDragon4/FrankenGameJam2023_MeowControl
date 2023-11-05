@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://cp8hn10n1g3bm"]
 
-[ext_resource type="Texture2D" path="res://assets/background/nature-forest-landscape-night-scene_1308-60557.jpg" id="1_2w35n"]
+[ext_resource type="Texture2D" uid="uid://bqtud16g0httd" path="res://assets/background/nature-forest-landscape-night-scene_1308-60557.jpg" id="1_2w35n"]
 [ext_resource type="PackedScene" uid="uid://ckmc6qcb3bcqd" path="res://entities/cat2.tscn" id="1_psaak"]
 [ext_resource type="PackedScene" uid="uid://cfrrm5yufyeo6" path="res://entities/ufo.tscn" id="1_puoih"]
 [ext_resource type="Script" path="res://scenes/Intro/intro.gd" id="1_xw7ws"]
 [ext_resource type="PackedScene" uid="uid://c3jw7es2j07h7" path="res://entities/tim.tscn" id="2_axgmd"]
 [ext_resource type="Texture2D" uid="uid://dogwlbpqs1f2l" path="res://scenes/Intro/beam.png" id="5_tb04q"]
-[ext_resource type="AudioStream" path="res://assets/BGM/info upgrade Ludum Dare 38 - Track 10.wav" id="7_gcjvc"]
+[ext_resource type="AudioStream" uid="uid://ddnmtlpce1wc0" path="res://assets/BGM/info upgrade Ludum Dare 38 - Track 10.wav" id="7_gcjvc"]
 [ext_resource type="Texture2D" uid="uid://be44s50cc6ou0" path="res://scenes/Intro/titleintro.png" id="8_0m17q"]
 [ext_resource type="AudioStream" uid="uid://ca5vti5kga62l" path="res://scenes/Intro/meow_control_opening_scene_voice_over_amplified.mp3" id="9_5o34e"]
 
