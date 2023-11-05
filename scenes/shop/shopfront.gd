@@ -8,7 +8,9 @@ var customer_counter = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameState.connect("customer_done", _start_timer)
+
 	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -32,3 +34,11 @@ func _start_timer():
 func _next_scene():
 #	placehodler für scene change
 	get_tree().quit()
+	
+	
+func _on_area_2d_body_entered(body):
+	DialogueManager.show_example_dialogue_balloon(load("res://dialog/template.dialogue"), "welcome_customer")
+	
+func _start_timer():
+	$Timer.start()
+
