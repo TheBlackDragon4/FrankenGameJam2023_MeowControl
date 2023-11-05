@@ -4,6 +4,8 @@ var npc = preload("res://entities/npc.tscn")
 var npcDog = preload("res://entities/npcDog.tscn")
 var hat_path = "res://assets/hats/hat_"
 
+var n
+var my_random_number
 var customer_counter = 0
 var rng = RandomNumberGenerator.new()
 
@@ -19,23 +21,26 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	my_random_number = rng.randi_range(0, 3)
 
 func _on_timer_timeout():
-	var n = npc.instantiate()
+	if my_random_number != 3:
+		n = npc.instantiate()
+	else:
+		n = npcDog.instantiate()
+	
 	n.position = Vector2(-716, 6)
 	$NpcContainer.add_child(n)
 	customer_counter += 1
 	
 func _start_timer():
-	if customer_counter == 5:
+	if customer_counter == 4:
 		_next_scene()
 	else:
 		$NpcSpawner.start()
 
 func _next_scene():
-#	placehodler für scene change
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")
 	
 func _on_area_2d_body_entered(body):
 	DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")

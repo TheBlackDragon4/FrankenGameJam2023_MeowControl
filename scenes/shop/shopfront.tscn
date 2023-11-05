@@ -51,8 +51,7 @@ shape = SubResource("CircleShape2D_a8x8p")
 
 [node name="Hat" type="Sprite2D" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.521569)
-position = Vector2(-2, -242)
+position = Vector2(-8, -218)
 scale = Vector2(0.3, 0.3)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
