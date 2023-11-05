@@ -1,5 +1,6 @@
 extends Node
 
+
 signal customer_done
 signal start_dialog
 

@@ -16,6 +16,7 @@ func _ready():
 	homeDestination = get_tree().root.get_node("Shopfront/Npc HomeDestination")
 	GameState.connect("customer_done", _go_home)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var to_player = destination.global_position - global_position
@@ -32,6 +33,7 @@ func _process(delta):
 
 	if goHome == true:
 		move_and_collide(homeDirection * speed * delta)
+
 
 func _go_home():
 	goHome = true

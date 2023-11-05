@@ -2,6 +2,7 @@ extends Node2D
 
 var npc = preload("res://entities/npc.tscn")
 
+
 var customer_counter = 0
 
 # Called when the node enters the scene tree for the first time.

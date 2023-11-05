@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://3rby5ppxao1r"]
+[gd_scene load_steps=7 format=3 uid="uid://3rby5ppxao1r"]
 
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
+[ext_resource type="Texture2D" uid="uid://dr0dvtacwu1uu" path="res://assets/hats/hat_00.png" id="5_5pap4"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a8x8p"]
@@ -45,6 +46,12 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_a8x8p")
+
+[node name="Hat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(97.25, -270.75)
+scale = Vector2(0.5, 0.655)
+texture = ExtResource("5_5pap4")
 
 [connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
