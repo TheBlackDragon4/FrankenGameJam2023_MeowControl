@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cymafjkettdtf"]
+
+[ext_resource type="Texture2D" uid="uid://iyup06gvqgku" path="res://assets/background/information_research/speakingPeople_church_Background.jpg" id="1_0fk3p"]
+[ext_resource type="Script" path="res://scenes/control_room/Information_CHURCH/Information_CHURCH.gd" id="1_ns06c"]
+
+[node name="Information_CHURCH" type="Node2D"]
+script = ExtResource("1_ns06c")
+
+[node name="SpeakingPeopleChurchBackground" type="Sprite2D" parent="."]
+position = Vector2(4.00001, -35.5)
+scale = Vector2(1.89648, 1.15527)
+texture = ExtResource("1_0fk3p")
+
+[node name="Camera2D" type="Camera2D" parent="."]
