@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://1mmfq1hajfbx"]
+[gd_scene load_steps=7 format=3 uid="uid://1mmfq1hajfbx"]
 
 [ext_resource type="Script" path="res://scenes/optimization/scripts/optimization.gd" id="1_dwooy"]
 [ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/optimization/background_white.png" id="2_vkxwr"]
 [ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/optimization/background_hat_building.jpeg" id="3_yfxi5"]
 [ext_resource type="Script" path="res://scenes/optimization/ButtonNEXTInNightScene.gd" id="4_gy8l3"]
+[ext_resource type="Texture2D" uid="uid://drqqinsa1dnhv" path="res://assets/optimization/workbg.png" id="4_mj0pg"]
 [ext_resource type="AudioStream" uid="uid://bmh5ruunk51j7" path="res://assets/BGM/craft Patreon Goal Reward Loops - Track 02.wav" id="5_64miv"]
 
 [node name="Optimization" type="Node2D"]
@@ -19,11 +20,16 @@ position = Vector2(-536, -256)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_yfxi5")
 
+[node name="Workbg" type="Sprite2D" parent="create_hat"]
+position = Vector2(1072, 512)
+scale = Vector2(2, 2)
+texture = ExtResource("4_mj0pg")
+
 [node name="create_hat2" type="Button" parent="."]
-offset_left = -720.0
-offset_top = -24.0
-offset_right = -384.0
-offset_bottom = 93.0
+offset_left = 431.0
+offset_top = 171.0
+offset_right = 767.0
+offset_bottom = 288.0
 text = "Create hats"
 
 [node name="NextButton" type="MenuButton" parent="."]
@@ -40,5 +46,6 @@ script = ExtResource("4_gy8l3")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_64miv")
 autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="create_hat2" to="." method="_on_create_hat_2_pressed"]
