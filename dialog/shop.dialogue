@@ -1,17 +1,3 @@
-~ this_is_a_node_title
-
-Customer: [[Hi.|Hello.|Howdy!|Yo!|Yoooo!| Yo yo yo!]] 
-Customer: [[I am looking for a hat. |Imma need a hat man! |I would like to purchase a hat, Sir Gato. |I would like to purchase a hat. |I came to buy a hat - I heard Sir Gato is the best!|Could you help me pick a hat?]]
-- First one
-	Customer: You picked the first one.
-- Second one
-	Customer: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Customer: For more information see the online documentation.
-
-=> END
-
 ~ welcome_customer
 
 Sir Gato: [[Good Meowning!|Greetings and salutations.|Welcome welcome!|Welcome to my humble claw-ters.]]
@@ -27,4 +13,5 @@ if has_hat == true
 	Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like it.
 	set has_hat = false
 else
-	Sir Gato: Sadly, I don't have the pawfect hat for you.	
+
+
