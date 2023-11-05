@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckmc6qcb3bcqd"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_7ftvv"]
-[ext_resource type="Texture2D" uid="uid://qx1t1wx018qe" path="res://scenes/Intro/pngtree-isolated-cat-on-white-background-png-image_7094927.png" id="2_6c7r3"]
+[ext_resource type="Texture2D" uid="uid://nb6r50367p0g" path="res://scenes/Intro/pngtree-isolated-cat-on-white-background-png-image_7094927mono.png" id="2_tknbp"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_7ftvv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_6c7r3")
+texture = ExtResource("2_tknbp")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0
