@@ -212,6 +212,7 @@ scale = Vector2(0.702381, 0.715278)
 texture = ExtResource("5_723m0")
 
 [node name="GoToSleep" type="MenuButton" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = -811.0
 offset_top = 461.0
