@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://bbiulrcargty4"
+path="res://.godot/imported/shop.dialogue-6422280642d4693c51cfb70e66c86ddf.tres"
+
+[deps]
+
+source_file="res://dialog/shop.dialogue"
+dest_files=["res://.godot/imported/shop.dialogue-6422280642d4693c51cfb70e66c86ddf.tres"]
+
+[params]
+
+defaults=true
