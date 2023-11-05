@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/optimization/background_hat_building.jpeg" id="2_qcqo5"]
 [ext_resource type="Texture2D" uid="uid://bhkvcx68nn8t2" path="res://assets/optimization/crafting_area.jpeg" id="3_5rb0b"]
 [ext_resource type="Texture2D" uid="uid://diqdfir6u5wcs" path="res://assets/optimization/card_slot_empty.png" id="4_0iuka"]
-[ext_resource type="Texture2D" uid="uid://dhcn3qb8scfyv" path="res://assets/hats/hat_06.jpeg" id="6_p6lyp"]
+[ext_resource type="Texture2D" uid="uid://b6jhsfi02npyy" path="res://assets/hats/hat_06.png" id="5_8wgs2"]
 [ext_resource type="Texture2D" uid="uid://bbix4cpisg8rn" path="res://assets/optimization/hat_color/color_0.png" id="7_scfqa"]
 
 [sub_resource type="GDScript" id="GDScript_sh8du"]
@@ -279,7 +279,7 @@ script = SubResource("GDScript_sh8du")
 [node name="hat_type_1" type="Sprite2D" parent="hat_type_picker"]
 position = Vector2(-539, -369)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_p6lyp")
+texture = ExtResource("5_8wgs2")
 
 [node name="hat_type" type="Sprite2D" parent="hat_type_picker"]
 position = Vector2(-539, -369)
