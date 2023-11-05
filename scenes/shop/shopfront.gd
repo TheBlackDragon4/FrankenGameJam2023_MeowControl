@@ -2,6 +2,7 @@ extends Node2D
 
 var npc = preload("res://entities/npc.tscn")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -20,3 +21,4 @@ func _on_timer_timeout():
 	
 func _on_area_2d_body_entered(body):
 	DialogueManager.show_example_dialogue_balloon(load("res://dialog/template.dialogue"), "welcome_customer")
+

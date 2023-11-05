@@ -5,9 +5,16 @@ extends CharacterBody2D
 var destination
 var distance
 
+var homeDestination
+var homeDistance
+
+var goHome = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	destination = get_tree().root.get_node("Shopfront/Npc Destination")
+	homeDestination = get_tree().root.get_node("Shopfront/Npc HomeDestination")
+	GameState.connect("delete_npc", _delete_npc)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -15,5 +22,19 @@ func _process(delta):
 	distance = to_player.length()
 	var direction = to_player.normalized()
 	
-	if distance > 5:
+	var away = homeDestination.global_position - global_position
+	homeDistance = away.length()
+	var homeDirection = away.normalized()
+
+	
+	if distance > 5 and goHome == false:
 		move_and_collide(direction * speed * delta)
+
+	if goHome == true:
+		move_and_collide(homeDirection * speed * delta)
+
+func _delete_npc():
+	goHome = true
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()

@@ -1,5 +1,6 @@
 extends Node
 
+signal delete_npc
 
 var has_hat = false
 var hat_inventory = [null,null,null] #int array for the hats in the players inventory, one int value defines the ID of the hat
