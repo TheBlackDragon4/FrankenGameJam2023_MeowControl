@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfcjr1ff1llsp"]
+
+[ext_resource type="Script" path="res://scenes/control_room/Information_ASIA/Information_asia.gd" id="1_htsyi"]
+[ext_resource type="Texture2D" uid="uid://b235v7sjusaln" path="res://assets/background/information_research/speakingPeople_china_Background.jpg" id="2_3k26x"]
+
+[node name="Information_asia" type="Node2D"]
+script = ExtResource("1_htsyi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999996, -13.7812)
+scale = Vector2(2.0022, 1.17145)
+texture = ExtResource("2_3k26x")
+
+[node name="Camera2D" type="Camera2D" parent="."]

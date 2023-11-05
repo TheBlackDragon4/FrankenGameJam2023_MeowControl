@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0ccqd"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_a8x8p"]
 
 [node name="Shopfront" type="Node2D" groups=["Environment"]]
 script = ExtResource("1_vehiw")
@@ -18,14 +18,11 @@ texture = ExtResource("2_pe4wd")
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
 position = Vector2(255, -13)
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="NpcSpawner" type="Timer" parent="."]
+one_shot = true
 autostart = true
 
 [node name="NpcContainer" type="Node2D" parent="."]
-
-[node name="Npc Destination" type="Marker2D" parent="."]
-position = Vector2(72, 6)
 
 [node name="NextButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -38,13 +35,16 @@ theme_override_font_sizes/font_size = 25
 text = "Next"
 script = ExtResource("5_gfrxh")
 
-[node name="DialogContainer" type="Node2D" parent="."]
+[node name="Npc Destination" type="Marker2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="DialogContainer"]
+[node name="Npc HomeDestination" type="Marker2D" parent="."]
+position = Vector2(-1083, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogContainer/Area2D"]
-shape = SubResource("CircleShape2D_0ccqd")
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="DialogContainer/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="DialogContainer/Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_a8x8p")
+
+[connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
