@@ -208,6 +208,7 @@ rotation = 3.14159
 scale = Vector2(2430.78, -166.455)
 
 [node name="CatSmile" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(151, 120)
 scale = Vector2(0.702381, 0.715278)
 texture = ExtResource("5_723m0")
