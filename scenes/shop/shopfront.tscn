@@ -18,7 +18,7 @@ texture = ExtResource("2_pe4wd")
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
 position = Vector2(255, -13)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="NpcSpawner" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
@@ -46,5 +46,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_a8x8p")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
