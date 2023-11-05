@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
-[ext_resource type="Texture2D" uid="uid://d1tww12lxdotk" path="res://assets/hats/hat_05.png" id="5_1hph3"]
 [ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 [ext_resource type="AudioStream" uid="uid://c8up18jpljbq6" path="res://assets/BGM/shop Ludum Dare 38 - Track 1.wav" id="6_daykk"]
+[ext_resource type="Texture2D" uid="uid://u1xes8vmetc0" path="res://assets/overlays/table_overlay.png" id="6_ib74v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a8x8p"]
 
@@ -18,7 +18,8 @@ script = ExtResource("1_vehiw")
 texture = ExtResource("2_pe4wd")
 
 [node name="Cat" parent="." instance=ExtResource("3_1lkm4")]
-position = Vector2(255, -13)
+position = Vector2(263, -39)
+scale = Vector2(1.3, 1.3)
 
 [node name="NpcSpawner" type="Timer" parent="."]
 one_shot = true
@@ -40,7 +41,7 @@ script = ExtResource("5_gfrxh")
 [node name="Npc Destination" type="Marker2D" parent="."]
 
 [node name="Npc HomeDestination" type="Marker2D" parent="."]
-position = Vector2(-1083, 0)
+position = Vector2(-728.265, 0)
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
@@ -53,12 +54,16 @@ visible = false
 modulate = Color(1, 1, 1, 0.521569)
 position = Vector2(-2, -242)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_1hph3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_daykk")
 autoplay = true
 bus = &"BGM"
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(288, 91)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_ib74v")
 
 [connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

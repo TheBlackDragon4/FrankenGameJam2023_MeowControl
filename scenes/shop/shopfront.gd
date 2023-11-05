@@ -1,10 +1,11 @@
 extends Node2D
 
 var npc = preload("res://entities/npc.tscn")
+var npcDog = preload("res://entities/npcDog.tscn")
 var hat_path = "res://assets/hats/hat_"
 
-
 var customer_counter = 0
+var rng = RandomNumberGenerator.new()
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +14,7 @@ func _ready():
 	GameState.connect("show_hat_1", _show_hat_1)
 	GameState.connect("show_hat_2", _show_hat_2)
 	GameState.connect("show_hat_3", _show_hat_3)
+	GameState.connect("hide_hat", _hide_hat)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,7 +28,7 @@ func _on_timer_timeout():
 	customer_counter += 1
 	
 func _start_timer():
-	if customer_counter == 2:
+	if customer_counter == 5:
 		_next_scene()
 	else:
 		$NpcSpawner.start()
@@ -49,3 +51,6 @@ func _show_hat_2():
 func _show_hat_3():
 	$Hat.texture = load(hat_path+str(GameState.hat_inventory[2])+".png")
 	$Hat.show()
+
+func _hide_hat():
+	$Hat.visible = false

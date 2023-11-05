@@ -8,12 +8,12 @@ NPC: [[I am looking for a hat.|Imma need a hat man!|I would like to purchase a h
 
 Sir Gato: [[It's good you came then.|I feel honoured you came to me with this request.|Meow or Never!|The time to get a hat is meow.|Meow is the best time to get a good hat.|Meow is your time to get a hat.|You don’t own a hat? Oh my, that’s cat-astrophic!|The impawtence of a good hat is not to be underestimated.|A good hat is like a friend for life – you see this is impawtant!]]
 
-#if hat_inventory[0] or hat_inventory[1] or hat_inventory[2] != null:
-if hat_inventory[0] != null:
+if hat_inventory[0] != null or hat_inventory[1] !=null or hat_inventory[2] != null:
 	Sir Gato: 
-	- hat 1 => hat_1
-	- hat 2 => hat_2
-	- hat 3 => hat_3
+	- Hat 1 => hat_1
+	- Hat 2 => hat_2
+	- Hat 3 => hat_3
+	- You don't deserve a hat! => bye
 	
 else
 	Sir Gato: Sadly, I don't have the pawfect hat for you. 
@@ -45,7 +45,9 @@ Sir Gato: [[You look pawsome in this hat, Sir!|You look pawsome in this hat, Mad
 
 ~ bye
 
-Sir Gato: [[Have a paw-some day!|Have a good day and stay paw-sitive!]]NPC: [[Have a good day!|G'day.|Thank you Sir!]]
+Sir Gato: [[Have a paw-some day!|Have a good day and stay paw-sitive!]]
+NPC: [[Have a good day!|G'day.|Thank you Sir!]]
+do emit("hide_hat")
 do emit("customer_done")
 => END!
 
