@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=23 format=3 uid="uid://yhp7g6rm3205"]
 
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
@@ -233,3 +233,4 @@ script = ExtResource("6_xrbph")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_yswq6")
 autoplay = true
+bus = &"BGM"

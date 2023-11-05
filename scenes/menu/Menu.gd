@@ -10,7 +10,7 @@ func _on_play_pressed():
 			GameState.hat_catalog[i].append(j)
 	
 	
-	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")
+	get_tree().change_scene_to_file("res://scenes/Intro/intro.tscn")
 	
 
 func _on_options_pressed():
