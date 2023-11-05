@@ -1,24 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://heo1577xwnq1"]
 
 [ext_resource type="Script" path="res://entities/npc.gd" id="1_oxqaf"]
-[ext_resource type="Texture2D" uid="uid://cu32s8w0tb8l0" path="res://assets/spritesheet_konni_walking.png" id="2_6y55k"]
+[ext_resource type="Texture2D" uid="uid://cjf33sbuxroh3" path="res://assets/spritesheet_doge_walking.png" id="2_mtm44"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ikduh"]
-atlas = ExtResource("2_6y55k")
-region = Rect2(0, 0, 1576, 2788)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ftyl"]
+atlas = ExtResource("2_mtm44")
+region = Rect2(0, 0, 1576, 2982)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eauao"]
-atlas = ExtResource("2_6y55k")
-region = Rect2(1576, 0, 1576, 2788)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejlbt"]
+atlas = ExtResource("2_mtm44")
+region = Rect2(1576, 0, 1576, 2982)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc27g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ikduh")
+"texture": SubResource("AtlasTexture_8ftyl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eauao")
+"texture": SubResource("AtlasTexture_ejlbt")
 }],
 "loop": true,
 "name": &"default",
@@ -36,8 +36,7 @@ script = ExtResource("1_oxqaf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.078, 0.078)
 sprite_frames = SubResource("SpriteFrames_cc27g")
-frame = 1
-frame_progress = 0.791657
+frame_progress = 0.550268
 
 [node name="Timer" type="Timer" parent="."]
 
