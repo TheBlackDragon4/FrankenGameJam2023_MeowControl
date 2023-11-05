@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _pressed():
-	get_tree().change_scene_to_file("res://scenes/optimization/optimization.tscn")
+	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")
