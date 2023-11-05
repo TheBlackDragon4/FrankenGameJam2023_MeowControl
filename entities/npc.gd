@@ -14,7 +14,7 @@ var goHome = false
 func _ready():
 	destination = get_tree().root.get_node("Shopfront/Npc Destination")
 	homeDestination = get_tree().root.get_node("Shopfront/Npc HomeDestination")
-	GameState.connect("delete_npc", _delete_npc)
+	GameState.connect("customer_done", _go_home)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -33,8 +33,9 @@ func _process(delta):
 	if goHome == true:
 		move_and_collide(homeDirection * speed * delta)
 
-func _delete_npc():
+func _go_home():
 	goHome = true
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
+	goHome = false
