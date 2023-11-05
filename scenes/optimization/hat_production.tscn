@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://de421dxllg256"]
+[gd_scene load_steps=10 format=3 uid="uid://de421dxllg256"]
 
 [ext_resource type="Script" path="res://scenes/optimization/scripts/hat_production.gd" id="1_es8tx"]
 [ext_resource type="Texture2D" uid="uid://b31u837yfvlea" path="res://assets/optimization/background_white.png" id="1_n87me"]
 [ext_resource type="Texture2D" uid="uid://des43a6owud3" path="res://assets/optimization/background_hat_building.jpeg" id="2_qcqo5"]
+[ext_resource type="Texture2D" uid="uid://bhkvcx68nn8t2" path="res://assets/optimization/crafting_area.jpeg" id="3_5rb0b"]
 [ext_resource type="Texture2D" uid="uid://diqdfir6u5wcs" path="res://assets/optimization/card_slot_empty.png" id="4_0iuka"]
 [ext_resource type="Texture2D" uid="uid://dhcn3qb8scfyv" path="res://assets/hats/hat_06.jpeg" id="6_p6lyp"]
 [ext_resource type="Texture2D" uid="uid://bbix4cpisg8rn" path="res://assets/optimization/hat_color/color_0.png" id="7_scfqa"]
@@ -262,9 +263,14 @@ position = Vector2(0, -1)
 [node name="background_white" type="Sprite2D" parent="."]
 texture = ExtResource("1_n87me")
 
+[node name="background_crafting" type="Sprite2D" parent="."]
+position = Vector2(-449, 0.499964)
+scale = Vector2(1, 1.05566)
+texture = ExtResource("3_5rb0b")
+
 [node name="background_hat_factory" type="Sprite2D" parent="."]
-position = Vector2(703, -284)
-scale = Vector2(0.5, 0.5)
+position = Vector2(448, -2)
+scale = Vector2(1, 1.05859)
 texture = ExtResource("2_qcqo5")
 
 [node name="hat_type_picker" type="Node2D" parent="."]

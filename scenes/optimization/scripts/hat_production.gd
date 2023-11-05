@@ -10,13 +10,13 @@ var current_hat_id = null
 func _ready():
 	
 	if GameState.hat_inventory[0] != null:
-		$hat_storage/storage_space_1_sprite.texture = load(hat_path + str(GameState.hat_inventory[0]/10) + str(GameState.hat_inventory[0]%10) + ".jpeg")
+		$hat_storage/storage_space_1_sprite.texture = load(hat_path + str(GameState.hat_inventory[0]/10) + str(GameState.hat_inventory[0]%10) + ".png")
 	
 	if GameState.hat_inventory[1] != null:
-		$hat_storage/storage_space_2_sprite.texture = load(hat_path + str(GameState.hat_inventory[1]/10) + str(GameState.hat_inventory[1]%10) + ".jpeg")
+		$hat_storage/storage_space_2_sprite.texture = load(hat_path + str(GameState.hat_inventory[1]/10) + str(GameState.hat_inventory[1]%10) + ".png")
 	
 	if GameState.hat_inventory[2] != null:
-		$hat_storage/storage_space_3_sprite.texture = load(hat_path + str(GameState.hat_inventory[2]/10) + str(GameState.hat_inventory[2]%10) + ".jpeg")
+		$hat_storage/storage_space_3_sprite.texture = load(hat_path + str(GameState.hat_inventory[2]/10) + str(GameState.hat_inventory[2]%10) + ".png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,7 +26,7 @@ func _process(delta):
 
 func _on_create_new_hat_pressed():
 	## function creates a new hat
-	$new_hat/new_hat_1.texture = load(hat_path+str(type_counter)+str(color_counter)+".jpeg")
+	$new_hat/new_hat_1.texture = load(hat_path+str(type_counter)+str(color_counter)+".png")
 	
 	current_hat_id = type_counter*10 + color_counter
 	
@@ -46,7 +46,7 @@ func _on_type_go_right_pressed():
 	else:
 		type_counter = 0
 	
-	$hat_type_picker/hat_type_1.texture = load(hat_path+str(type_counter) + "6" + ".jpeg")
+	$hat_type_picker/hat_type_1.texture = load(hat_path+str(type_counter) + "6" + ".png")
 
 func _on_type_go_left_pressed():
 	
@@ -55,7 +55,7 @@ func _on_type_go_left_pressed():
 	else:
 		type_counter = 7
 	
-	$hat_type_picker/hat_type_1.texture = load(hat_path+str(type_counter) + "6" + ".jpeg")
+	$hat_type_picker/hat_type_1.texture = load(hat_path+str(type_counter) + "6" + ".png")
 
 
 func _on_color_go_right_pressed():
@@ -81,19 +81,19 @@ func _on_color_go_left_pressed():
 
 func _on_store_1_pressed():
 	if current_hat_id != null:
-		$hat_storage/storage_space_1_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".jpeg")
+		$hat_storage/storage_space_1_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".png")
 		GameState.hat_inventory[0] = current_hat_id
 	
 
 
 func _on_store_2_pressed():
 	if current_hat_id != null:
-		$hat_storage/storage_space_2_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".jpeg")
+		$hat_storage/storage_space_2_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".png")
 		GameState.hat_inventory[1] = current_hat_id
 		
 
 
 func _on_store_3_pressed():
 	if current_hat_id != null:
-		$hat_storage/storage_space_3_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".jpeg")
+		$hat_storage/storage_space_3_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".png")
 		GameState.hat_inventory[2] = current_hat_id
