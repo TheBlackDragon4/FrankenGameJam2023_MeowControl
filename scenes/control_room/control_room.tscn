@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=24 format=3 uid="uid://yhp7g6rm3205"]
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
+[ext_resource type="Script" path="res://scenes/control_room/control_room.gd" id="1_rvfy2"]
 [ext_resource type="Texture2D" uid="uid://b235v7sjusaln" path="res://assets/background/information_research/speakingPeople_china_Background.jpg" id="2_i1okl"]
 [ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_0.gd" id="3_24lfx"]
 [ext_resource type="Texture2D" uid="uid://48fd66e51wr4" path="res://assets/background/information_research/speakingPeople_marketplace_Background.jpg" id="4_l8uoj"]
@@ -24,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://cj7rrotrq4hc" path="res://assets/BGM/info Patreon Goal Reward Loops - Track 03.wav" id="23_yswq6"]
 
 [node name="control_room" type="Node2D"]
+script = ExtResource("1_rvfy2")
 
 [node name="ExampleControlRoom" type="Sprite2D" parent="."]
 position = Vector2(119.124, 40.4242)
@@ -233,3 +235,10 @@ script = ExtResource("6_xrbph")
 stream = ExtResource("23_yswq6")
 autoplay = true
 bus = &"BGM"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+initial_position = 1
+dialog_text = "you have no more tries left"
+
+[connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]

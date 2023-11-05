@@ -12,5 +12,6 @@ func _process(delta):
 
 
 func _pressed():
-	get_tree().change_scene_to_file("res://scenes/control_room/Information_MARKETPLACE1/Information_marketplace1.tscn")
+	if GameState.research_tries > 0:
+		get_tree().change_scene_to_file("res://scenes/control_room/Information_MARKETPLACE1/Information_marketplace1.tscn")
 

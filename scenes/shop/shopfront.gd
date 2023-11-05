@@ -13,7 +13,7 @@ func _ready():
 	GameState.connect("show_hat_1", _show_hat_1)
 	GameState.connect("show_hat_2", _show_hat_2)
 	GameState.connect("show_hat_3", _show_hat_3)
-	
+	GameState.research_tries = 2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

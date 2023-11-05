@@ -54,5 +54,6 @@ do emit("customer_done")
 
 John: Red Hats are really hot right now.
 Bob: I know right? I can't wait to buy one!
+do research_tries -= 1
 do emit("change_scene")
 => END!
