@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ntvm0oauww1x"]
+
+[ext_resource type="Script" path="res://scenes/control_room/Information_MUSEUM2/Information_MUSEUM2.gd" id="1_oc8hb"]
+[ext_resource type="Texture2D" uid="uid://cm8u0gf35adi8" path="res://assets/background/information_research/speakingPeople_museum_Background.jpg" id="2_2ssn5"]
+
+[node name="Information_MUSEUM2" type="Node2D"]
+script = ExtResource("1_oc8hb")
+
+[node name="SpeakingPeopleMuseumBackground" type="Sprite2D" parent="."]
+position = Vector2(0.5, -31)
+scale = Vector2(1.93262, 1.12305)
+texture = ExtResource("2_2ssn5")
+
+[node name="Camera2D" type="Camera2D" parent="."]

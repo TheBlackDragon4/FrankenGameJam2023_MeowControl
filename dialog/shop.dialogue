@@ -13,6 +13,5 @@ if has_hat == true
 	Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like it.
 	set has_hat = false
 else
-	Sir Gato: Sadly, I don't have the pawfect hat for you. 
-	do emit("customer_done")
-	=> END!
+
+
