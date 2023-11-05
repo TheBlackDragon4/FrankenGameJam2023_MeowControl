@@ -1,7 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj0t2elojjhm7"]
+[gd_scene load_steps=7 format=3 uid="uid://bj0t2elojjhm7"]
 
 [ext_resource type="Script" path="res://entities/npc.gd" id="1_yfrev"]
-[ext_resource type="Texture2D" uid="uid://bhovnr36badxc" path="res://assets/20231104_194420.jpg" id="2_h72tj"]
+[ext_resource type="Texture2D" uid="uid://cu32s8w0tb8l0" path="res://assets/spritesheet_konni_walking.png" id="2_rbrfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikduh"]
+atlas = ExtResource("2_rbrfc")
+region = Rect2(0, 0, 1576, 2788)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eauao"]
+atlas = ExtResource("2_rbrfc")
+region = Rect2(1576, 0, 1576, 2788)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cc27g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikduh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eauao")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5uq"]
 size = Vector2(128, 128)
@@ -11,9 +33,11 @@ scale = Vector2(1.03075, 2.25718)
 collision_layer = 2
 script = ExtResource("1_yfrev")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_h72tj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.078, 0.078)
+sprite_frames = SubResource("SpriteFrames_cc27g")
+frame = 1
+frame_progress = 0.791657
 
 [node name="Timer" type="Timer" parent="."]
 

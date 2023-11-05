@@ -49,3 +49,10 @@ Sir Gato: [[Have a paw-some day!|Have a good day and stay paw-sitive!]]NPC: [[Ha
 do emit("customer_done")
 => END!
 
+
+~ customer_talking
+
+John: Red Hats are really hot right now.
+Bob: I know right? I can't wait to buy one!
+do emit("change_scene")
+=> END!

@@ -29,14 +29,19 @@ func _process(delta):
 
 	
 	if distance > 5 and goHome == false:
+		$AnimatedSprite2D.play("default")
 		move_and_collide(direction * speed * delta)
+	elif goHome == false:
+		$AnimatedSprite2D.stop()
 
 	if goHome == true:
+		$AnimatedSprite2D.play("default")
 		move_and_collide(homeDirection * speed * delta)
 
 
 func _go_home():
 	goHome = true
+	$AnimatedSprite2D.play("default")
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
