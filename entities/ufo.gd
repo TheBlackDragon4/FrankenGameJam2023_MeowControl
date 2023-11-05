@@ -23,13 +23,21 @@ func _process(delta):
 	enddistance = to_player.length()
 	var enddirection = away.normalized()
 	
+	$AnimatedSprite2D.play("default")
+	
 	if distance > 5 and goAway == false:
 		move_and_collide(direction * speed * delta)
 		$Timer.start()
 	
 	if goAway == true:
 		move_and_collide(enddirection * speed * delta)
+		if enddistance < 1:
+			queue_free()
 
 func _on_timer_timeout():
 	goAway = true
 	$Timer.stop()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	pass

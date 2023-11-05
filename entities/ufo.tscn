@@ -1,15 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0j4rl30orl5e"]
+[gd_scene load_steps=7 format=3 uid="uid://b38p4r40u5v8i"]
 
 [ext_resource type="Script" path="res://entities/ufo.gd" id="1_1u2eu"]
-[ext_resource type="Texture2D" uid="uid://dhqljdpp27kdt" path="res://scenes/Intro/opening_scene_ufo.png" id="2_nmpf4"]
+[ext_resource type="Texture2D" uid="uid://cpf0fmdiimjwb" path="res://scenes/Intro/spritesheet_ufo.png" id="2_lefit"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_551sh"]
+atlas = ExtResource("2_lefit")
+region = Rect2(0, 0, 1552, 972)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ewf4"]
+atlas = ExtResource("2_lefit")
+region = Rect2(1552, 0, 1552, 972)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrg7x"]
+atlas = ExtResource("2_lefit")
+region = Rect2(3104, 0, 1552, 972)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qshtq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_551sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ewf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrg7x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_1u2eu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_nmpf4")
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qshtq")
+frame = 1
+frame_progress = 0.634798
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
