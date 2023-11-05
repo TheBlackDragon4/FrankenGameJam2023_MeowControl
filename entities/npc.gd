@@ -14,6 +14,7 @@ var goHome = false
 func _ready():
 	destination = get_tree().root.get_node("Shopfront/Npc Destination")
 	homeDestination = get_tree().root.get_node("Shopfront/Npc HomeDestination")
+	GameState.connect("customer_done", _go_home)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

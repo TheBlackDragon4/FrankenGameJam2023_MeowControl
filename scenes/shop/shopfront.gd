@@ -25,10 +25,6 @@ func _on_timer_timeout():
 	$NpcContainer.add_child(n)
 	customer_counter += 1
 	
-func _on_area_2d_body_entered(body):
-	DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")
-
-	
 func _start_timer():
 	if customer_counter == 2:
 		_next_scene()
@@ -39,27 +35,8 @@ func _next_scene():
 #	placehodler für scene change
 	get_tree().quit()
 	
-	
-func _on_area_2d_body_entered(body):
-	DialogueManager.show_example_dialogue_balloon(load("res://dialog/template.dialogue"), "welcome_customer")
-	
-func _start_timer():
-	$Timer.start()
-
 func _on_area_2d_body_entered(body):
 	DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")
-
-	
-func _start_timer():
-	if customer_counter == 2:
-		_next_scene()
-	else:
-		$NpcSpawner.start()
-
-func _next_scene():
-#	placehodler für scene change
-	get_tree().quit()
-
 
 func _show_hat_1():
 	$Hat.texture = load(hat_path+str(GameState.hat_inventory[0])+".png")
