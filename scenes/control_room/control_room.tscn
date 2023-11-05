@@ -1,27 +1,16 @@
-[gd_scene load_steps=24 format=3 uid="uid://yhp7g6rm3205"]
+[gd_scene load_steps=13 format=3 uid="uid://yhp7g6rm3205"]
 
 [ext_resource type="Texture2D" uid="uid://bine4uf4wae5y" path="res://assets/background/control_room.png" id="1_dpfv4"]
 [ext_resource type="Script" path="res://scenes/control_room/control_room.gd" id="1_rvfy2"]
 [ext_resource type="Texture2D" uid="uid://b235v7sjusaln" path="res://assets/background/information_research/speakingPeople_china_Background.jpg" id="2_i1okl"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_0.gd" id="3_24lfx"]
 [ext_resource type="Texture2D" uid="uid://48fd66e51wr4" path="res://assets/background/information_research/speakingPeople_marketplace_Background.jpg" id="4_l8uoj"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_1.gd" id="5_83j5i"]
-[ext_resource type="Script" path="res://scenes/control_room/GoToSleep.gd" id="5_dh0yb"]
 [ext_resource type="Texture2D" uid="uid://bdga0je0gsk6l" path="res://assets/background/information_research/speakingPeople_marketplace_Background1.jpg" id="6_i4a5e"]
-[ext_resource type="Script" path="res://scenes/control_room/ButtonNEXTInShopScene.gd" id="6_xrbph"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_2.gd" id="7_2ovh3"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_3.gd" id="9_ptig2"]
 [ext_resource type="Texture2D" uid="uid://bxqnicm43shxr" path="res://assets/background/information_research/speakingPeople_museum_Background1.jpg" id="11_jxl4t"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_ABOVE_4.gd" id="11_u2x4t"]
 [ext_resource type="Texture2D" uid="uid://cm8u0gf35adi8" path="res://assets/background/information_research/speakingPeople_museum_Background.jpg" id="12_h0wud"]
 [ext_resource type="Texture2D" uid="uid://rjmko065bx5p" path="res://assets/background/information_research/speakingPeople_Background.jpg" id="13_m8c4e"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_0.gd" id="13_pjrxt"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_1.gd" id="14_kqmd5"]
 [ext_resource type="Texture2D" uid="uid://badnv2rwn404j" path="res://assets/background/information_research/speakingPeople_park_Background.jpg" id="14_yybc7"]
 [ext_resource type="Texture2D" uid="uid://dgxt32lwodpk1" path="res://assets/background/information_research/speakingPeople_sittingChair_Background.jpg" id="15_7hr8a"]
 [ext_resource type="Texture2D" uid="uid://iyup06gvqgku" path="res://assets/background/information_research/speakingPeople_church_Background.jpg" id="16_p7rkc"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_2.gd" id="17_2tjen"]
-[ext_resource type="Script" path="res://scenes/control_room/Button_BELOW_3.gd" id="19_t7oov"]
 [ext_resource type="AudioStream" uid="uid://cj7rrotrq4hc" path="res://assets/BGM/info Patreon Goal Reward Loops - Track 03.wav" id="23_yswq6"]
 
 [node name="control_room" type="Node2D"]
@@ -43,7 +32,6 @@ offset_left = -935.889
 offset_top = -405.345
 offset_right = -895.89
 offset_bottom = -365.345
-script = ExtResource("3_24lfx")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_AVOVE_0" type="Sprite2D" parent="ExampleControlRoom/Button_ABOVE_0"]
@@ -62,7 +50,6 @@ offset_left = -542.418
 offset_top = -404.385
 offset_right = -502.417
 offset_bottom = -364.386
-script = ExtResource("5_83j5i")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_ABOVE_1" type="Sprite2D" parent="ExampleControlRoom/Button_ABOVE_1"]
@@ -81,7 +68,6 @@ offset_left = -130.936
 offset_top = -406.391
 offset_right = -90.9357
 offset_bottom = -366.392
-script = ExtResource("7_2ovh3")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_ABOVE_2" type="Sprite2D" parent="ExampleControlRoom/Button_ABOVE_2"]
@@ -100,7 +86,6 @@ offset_left = 242.014
 offset_top = -404.881
 offset_right = 282.013
 offset_bottom = -364.882
-script = ExtResource("9_ptig2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_ABOVE_3" type="Sprite2D" parent="ExampleControlRoom/Button_ABOVE_3"]
@@ -119,7 +104,6 @@ offset_left = 629.026
 offset_top = -405.851
 offset_right = 669.026
 offset_bottom = -365.852
-script = ExtResource("11_u2x4t")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_ABOVE_4" type="Sprite2D" parent="ExampleControlRoom/Button_ABOVE_4"]
@@ -138,7 +122,6 @@ offset_left = -924.883
 offset_top = -149.555
 offset_right = -884.883
 offset_bottom = -109.555
-script = ExtResource("13_pjrxt")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_BELOW_0" type="Sprite2D" parent="ExampleControlRoom/Button_BELOW_0"]
@@ -157,7 +140,6 @@ offset_left = -537.887
 offset_top = -146.559
 offset_right = -497.887
 offset_bottom = -106.559
-script = ExtResource("14_kqmd5")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_BELOW_1" type="Sprite2D" parent="ExampleControlRoom/Button_BELOW_1"]
@@ -176,7 +158,6 @@ offset_left = 245.724
 offset_top = -150.051
 offset_right = 285.724
 offset_bottom = -110.051
-script = ExtResource("17_2tjen")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_BELOW_2" type="Sprite2D" parent="ExampleControlRoom/Button_BELOW_2"]
@@ -195,7 +176,6 @@ offset_left = 633.195
 offset_top = -148.069
 offset_right = 673.196
 offset_bottom = -108.069
-script = ExtResource("19_t7oov")
 metadata/_edit_use_anchors_ = true
 
 [node name="Image_BELOW_3" type="Sprite2D" parent="ExampleControlRoom/Button_BELOW_3"]
@@ -218,7 +198,6 @@ offset_bottom = 556.0
 scale = Vector2(0.988414, 1.00121)
 theme_override_font_sizes/font_size = 25
 text = "Go to sleep"
-script = ExtResource("5_dh0yb")
 
 [node name="NextButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -228,8 +207,7 @@ offset_right = 1038.0
 offset_bottom = 569.0
 scale = Vector2(0.9922, 1.00462)
 theme_override_font_sizes/font_size = 25
-text = "Next"
-script = ExtResource("6_xrbph")
+text = "Skip"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_yswq6")
@@ -240,5 +218,16 @@ bus = &"BGM"
 initial_position = 1
 dialog_text = "you have no more tries left"
 
+[connection signal="pressed" from="ExampleControlRoom/Button_ABOVE_0" to="." method="_on_button_above_0_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_ABOVE_1" to="." method="_on_button_above_1_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_ABOVE_2" to="." method="_on_button_above_2_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_ABOVE_3" to="." method="_on_button_above_3_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_ABOVE_4" to="." method="_on_button_above_4_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_BELOW_0" to="." method="_on_button_below_0_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_BELOW_1" to="." method="_on_button_below_1_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_BELOW_2" to="." method="_on_button_below_2_pressed"]
+[connection signal="pressed" from="ExampleControlRoom/Button_BELOW_3" to="." method="_on_button_below_3_pressed"]
+[connection signal="pressed" from="GoToSleep" to="." method="_on_go_to_sleep_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]
 [connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]

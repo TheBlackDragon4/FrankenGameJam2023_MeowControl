@@ -35,7 +35,7 @@ func _on_timer_timeout():
 	customer_counter += 1
 	
 func _start_timer():
-	if customer_counter == 4:
+	if customer_counter == GameState.customer_per_day:
 		_next_scene()
 	else:
 		$NpcSpawner.start()
@@ -60,3 +60,7 @@ func _show_hat_3():
 
 func _hide_hat():
 	$Hat.visible = false
+
+
+func _on_next_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")

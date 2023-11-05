@@ -3,9 +3,26 @@
 [ext_resource type="Script" path="res://scenes/shop/shopfront.gd" id="1_vehiw"]
 [ext_resource type="Texture2D" uid="uid://r4dbdliam5hh" path="res://assets/background/shopfront.jpg" id="2_pe4wd"]
 [ext_resource type="PackedScene" uid="uid://h6l23w155bje" path="res://entities/cat.tscn" id="3_1lkm4"]
-[ext_resource type="Script" path="res://scenes/shop/ButtonNEXTInOptiScene.gd" id="5_gfrxh"]
 [ext_resource type="AudioStream" uid="uid://c8up18jpljbq6" path="res://assets/BGM/shop Ludum Dare 38 - Track 1.wav" id="6_daykk"]
 [ext_resource type="Texture2D" uid="uid://u1xes8vmetc0" path="res://assets/overlays/table_overlay.png" id="6_ib74v"]
+
+[sub_resource type="GDScript" id="GDScript_1tfx4"]
+script/source = "extends MenuButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://scenes/optimization/hat_production.tscn\")
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a8x8p"]
 
@@ -41,8 +58,8 @@ offset_right = 911.0
 offset_bottom = 497.0
 scale = Vector2(0.9922, 1.00462)
 theme_override_font_sizes/font_size = 25
-text = "Next"
-script = ExtResource("5_gfrxh")
+text = "Skip"
+script = SubResource("GDScript_1tfx4")
 
 [node name="Npc Destination" type="Marker2D" parent="."]
 
@@ -66,4 +83,5 @@ autoplay = true
 bus = &"BGM"
 
 [connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
