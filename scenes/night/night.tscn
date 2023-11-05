@@ -1,10 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bdoa0xo7uidex"]
+[gd_scene load_steps=9 format=3 uid="uid://bdoa0xo7uidex"]
 
 [ext_resource type="Script" path="res://scenes/night/night_scene.gd" id="1_4lp2t"]
 [ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/night/background_night.png" id="2_rqpef"]
 [ext_resource type="Texture2D" uid="uid://cqbtci3gtesig" path="res://assets/night/moon.png" id="3_aadhj"]
 [ext_resource type="Texture2D" uid="uid://bgm8ps6413n6v" path="res://assets/night/sleeping_gato.png" id="4_g80el"]
 [ext_resource type="Texture2D" uid="uid://dkgy5giwstm3c" path="res://assets/night/hutstander_Nacht.png" id="5_uaajc"]
+[ext_resource type="AudioStream" uid="uid://cgt6fttioooy2" path="res://assets/BGM/sleep Patreon Goal Reward Loops - Track 01.wav" id="4_kpc12"]
 
 [sub_resource type="Animation" id="Animation_ohxwn"]
 length = 0.001
@@ -84,6 +86,9 @@ texture = ExtResource("5_uaajc")
 
 [node name="cat" type="Sprite2D" parent="night_scene"]
 texture = ExtResource("4_g80el")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="night_scene"]
+stream = ExtResource("4_kpc12")
+autoplay = true
 
 [connection signal="tree_entered" from="night_scene" to="night_scene" method="_on_tree_entered"]
 [connection signal="pressed" from="night_scene/button_skip" to="night_scene" method="_on_button_pressed"]
