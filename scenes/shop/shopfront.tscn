@@ -19,6 +19,7 @@ texture = ExtResource("2_pe4wd")
 position = Vector2(255, -13)
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 autostart = true
 
 [node name="NpcContainer" type="Node2D" parent="."]
@@ -40,6 +41,7 @@ script = ExtResource("5_gfrxh")
 position = Vector2(-1083, 0)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_a8x8p")
