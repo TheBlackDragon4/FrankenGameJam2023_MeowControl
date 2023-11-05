@@ -15,13 +15,11 @@ func _process(delta):
 		$AcceptDialog.show()
 		dialog_shown = true
 	
-func _on_accept_dialog_canceled():
-	
+func _on_accept_dialog_canceled():	
 	get_tree().change_scene_to_file("res://scenes/shop/shopfront.tscn")
 
 
 func _on_accept_dialog_confirmed():
-	
 	get_tree().change_scene_to_file("res://scenes/shop/shopfront.tscn")
 
 
