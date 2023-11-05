@@ -8,6 +8,7 @@ signal show_hat_3
 signal change_scene
 signal hide_hat
 
+var metDog = false
 
 var hat_inventory = [null,null,null] #int array for the hats in the players inventory, one int value defines the ID of the hat
 var hat_catalog = [] #array with indexes for every possible hat in the game

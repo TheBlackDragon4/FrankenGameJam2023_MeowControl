@@ -54,3 +54,17 @@ Bob: I know right? I can't wait to buy one!
 do research_tries -= 1
 do emit("change_scene")
 => END!
+
+~ dog
+# alles template lul
+if metDog != true
+	Sir Gato: What's a dog doing in my feline hat shop?
+	Barkus : Woof
+	do metDog = true
+	do emit("customer_done")
+	=> END!
+else
+	Sir Gato: fook off pupper
+	Barkus: *sad* Woof
+	do emit("customer_done")
+	=> END!

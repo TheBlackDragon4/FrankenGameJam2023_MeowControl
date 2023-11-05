@@ -44,7 +44,10 @@ func _next_scene():
 	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")
 	
 func _on_area_2d_body_entered(body):
-	DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")
+	if body.is_in_group("npc"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "welcome_customer")
+	if body.is_in_group("dog"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialog/shop.dialogue"), "dog")
 
 func _show_hat_1():
 	$Hat.texture = load(hat_path+str(GameState.hat_inventory[0]/10)+str(GameState.hat_inventory[0]%10)+".png")

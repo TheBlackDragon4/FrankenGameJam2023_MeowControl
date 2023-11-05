@@ -70,6 +70,7 @@ position = Vector2(-728.265, 0)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("CircleShape2D_a8x8p")
 
 [node name="Hat" type="Sprite2D" parent="."]
