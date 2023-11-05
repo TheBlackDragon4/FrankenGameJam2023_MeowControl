@@ -264,13 +264,14 @@ position = Vector2(0, -1)
 texture = ExtResource("1_n87me")
 
 [node name="background_crafting" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-449, 0.499964)
 scale = Vector2(1, 1.05566)
 texture = ExtResource("3_5rb0b")
 
 [node name="background_hat_factory" type="Sprite2D" parent="."]
-position = Vector2(448, -2)
-scale = Vector2(1, 1.05859)
+position = Vector2(703, -268)
+scale = Vector2(0.5, 0.53)
 texture = ExtResource("2_qcqo5")
 
 [node name="hat_type_picker" type="Node2D" parent="."]
@@ -396,11 +397,11 @@ offset_bottom = 288.0
 text = "store here"
 
 [node name="back_to_optimization" type="Button" parent="."]
-offset_left = -756.0
-offset_top = 409.0
-offset_right = -488.0
-offset_bottom = 480.0
-text = "Go Back"
+offset_left = 664.0
+offset_top = 429.0
+offset_right = 932.0
+offset_bottom = 500.0
+text = "Next"
 
 [connection signal="pressed" from="hat_type_picker/type_go_right" to="." method="_on_type_go_right_pressed"]
 [connection signal="pressed" from="hat_type_picker/type_go_left" to="." method="_on_type_go_left_pressed"]
@@ -410,4 +411,4 @@ text = "Go Back"
 [connection signal="pressed" from="hat_storage/store_1" to="." method="_on_store_1_pressed"]
 [connection signal="pressed" from="hat_storage/store_2" to="." method="_on_store_2_pressed"]
 [connection signal="pressed" from="hat_storage/store_3" to="." method="_on_store_3_pressed"]
-[connection signal="pressed" from="back_to_optimization" to="." method="_on_back_to_optimization_pressed"]
+[connection signal="pressed" from="back_to_optimization" to="." method="_on_next_pressed"]

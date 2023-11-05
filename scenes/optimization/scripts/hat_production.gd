@@ -97,3 +97,8 @@ func _on_store_3_pressed():
 	if current_hat_id != null:
 		$hat_storage/storage_space_3_sprite.texture = load(hat_path+str(current_hat_id/10)+str(current_hat_id%10)+".png")
 		GameState.hat_inventory[2] = current_hat_id
+
+
+func _on_next_pressed():
+	
+	get_tree().change_scene_to_file("res://scenes/night/night.tscn")

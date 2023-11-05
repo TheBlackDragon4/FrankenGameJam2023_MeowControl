@@ -14,4 +14,4 @@ func _process(delta):
 
 func _on_button_pressed():
 	#skip night button ends night scene instantly
-	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/control_room/control_room.tscn")
