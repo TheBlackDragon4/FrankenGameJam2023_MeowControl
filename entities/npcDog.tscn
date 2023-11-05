@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://heo1577xwnq1"]
+
+[ext_resource type="Script" path="res://entities/npc.gd" id="1_oxqaf"]
+[ext_resource type="Texture2D" uid="uid://cu32s8w0tb8l0" path="res://assets/spritesheet_konni_walking.png" id="2_6y55k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikduh"]
+atlas = ExtResource("2_6y55k")
+region = Rect2(0, 0, 1576, 2788)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eauao"]
+atlas = ExtResource("2_6y55k")
+region = Rect2(1576, 0, 1576, 2788)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cc27g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikduh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eauao")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5uq"]
+size = Vector2(128, 128)
+
+[node name="Npc" type="CharacterBody2D" groups=["Npc"]]
+scale = Vector2(1.03075, 2.25718)
+collision_layer = 2
+script = ExtResource("1_oxqaf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.078, 0.078)
+sprite_frames = SubResource("SpriteFrames_cc27g")
+frame = 1
+frame_progress = 0.791657
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_xn5uq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

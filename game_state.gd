@@ -6,9 +6,9 @@ signal show_hat_1
 signal show_hat_2
 signal show_hat_3
 signal change_scene
+signal hide_hat
 
 
-var has_hat = false
 var hat_inventory = [null,null,null] #int array for the hats in the players inventory, one int value defines the ID of the hat
 var hat_catalog = [] #array with indexes for every possible hat in the game
 var karma = 3 #currency for creating hats etc. inital value 3 

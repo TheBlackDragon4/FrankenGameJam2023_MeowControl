@@ -37,6 +37,8 @@ func _process(delta):
 	if goHome == true:
 		$AnimatedSprite2D.play("default")
 		move_and_collide(homeDirection * speed * delta)
+		if homeDistance < 5:
+			queue_free()
 
 
 func _go_home():
