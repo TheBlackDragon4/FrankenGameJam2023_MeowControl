@@ -232,3 +232,4 @@ script = ExtResource("6_xrbph")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_yswq6")
 autoplay = true
+bus = &"BGM"
