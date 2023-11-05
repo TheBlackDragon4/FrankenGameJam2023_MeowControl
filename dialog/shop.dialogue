@@ -1,0 +1,51 @@
+~ welcome_customer
+
+Sir Gato: [[Good Meowning!|Greetings and salutations.|Welcome welcome!|Welcome to my humble claw-ters.]]
+Sir Gato: [[I am Sir Gato, how may I help?|How are you feline today?|How may I help?|Pleased to have meow.|Pleased to have you.]]
+
+NPC: [[Hi.|Hello.|Howdy!|Yo!|Yoooo!| Yo yo yo!]] 
+NPC: [[I am looking for a hat.|Imma need a hat man!|I would like to purchase a hat, Sir Gato. |I would like to purchase a hat. |I came to buy a hat - I heard Sir Gato is the best!|Could you help me pick a hat?]]
+
+Sir Gato: [[It's good you came then.|I feel honoured you came to me with this request.|Meow or Never!|The time to get a hat is meow.|Meow is the best time to get a good hat.|Meow is your time to get a hat.|You don’t own a hat? Oh my, that’s cat-astrophic!|The impawtence of a good hat is not to be underestimated.|A good hat is like a friend for life – you see this is impawtant!]]
+
+if hat_inventory[0] or hat_inventory[1] or hat_inventory[2] != null:
+	if hat_inventory[0] != null:
+		Sir Gato: 
+		- hat 1 => hat_1
+		- hat 2 => hat_2
+		- hat 3 => hat_3
+	
+else
+	Sir Gato: Sadly, I don't have the pawfect hat for you. 
+=> bye
+
+~ hat_1
+do emit("show_hat_1")
+Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like.
+do hat_inventory[0] = null
+Sir Gato: [[You look pawsome in this hat, Sir!|You look pawsome in this hat, Madam!|You look pawsome with this hat!|Pawsome!|You look pawsome in this|This looks pawsome on you|Claw-some!|You look claw-some in this|This looks claw-some on you|Purrfect!|You look purrfect in this|This looks purrfect on you|Hut steht dir gut!|In Germany, we say: Hut steht dir gut!|This hat fits you purrfectly!|Con-hat-ulations! This looks great!|Hat's the spirit!]]
+	
+=> bye
+
+~ hat_2
+do emit("show_hat_2")
+Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like.
+do hat_inventory[1] = null
+Sir Gato: [[You look pawsome in this hat, Sir!|You look pawsome in this hat, Madam!|You look pawsome with this hat!|Pawsome!|You look pawsome in this|This looks pawsome on you|Claw-some!|You look claw-some in this|This looks claw-some on you|Purrfect!|You look purrfect in this|This looks purrfect on you|Hut steht dir gut!|In Germany, we say: Hut steht dir gut!|This hat fits you purrfectly!|Con-hat-ulations! This looks great!|Hat's the spirit!]]
+	
+=> bye
+
+~ hat_3
+do emit("show_hat_3")
+Sir Gato: Luckily, I have the pawfect hat for you. Try this one on and tell meow how you like.
+do hat_inventory[2] = null
+Sir Gato: [[You look pawsome in this hat, Sir!|You look pawsome in this hat, Madam!|You look pawsome with this hat!|Pawsome!|You look pawsome in this|This looks pawsome on you|Claw-some!|You look claw-some in this|This looks claw-some on you|Purrfect!|You look purrfect in this|This looks purrfect on you|Hut steht dir gut!|In Germany, we say: Hut steht dir gut!|This hat fits you purrfectly!|Con-hat-ulations! This looks great!|Hat's the spirit!]]
+	
+=> bye
+
+~ bye
+
+Sir Gato: [[Have a paw-some day!|Have a good day and stay paw-sitive!]]NPC: [[Have a good day!|G'day.|Thank you Sir!]]
+do emit("customer_done")
+=> END!
+
