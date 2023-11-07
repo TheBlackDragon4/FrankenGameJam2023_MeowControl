@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cp8hn10n1g3bm"]
+[gd_scene load_steps=11 format=3 uid="uid://cp8hn10n1g3bm"]
 
 [ext_resource type="Texture2D" uid="uid://bqtud16g0httd" path="res://assets/background/nature-forest-landscape-night-scene_1308-60557.jpg" id="1_2w35n"]
 [ext_resource type="PackedScene" uid="uid://ckmc6qcb3bcqd" path="res://entities/cat2.tscn" id="1_psaak"]
@@ -9,6 +9,24 @@
 [ext_resource type="AudioStream" uid="uid://ddnmtlpce1wc0" path="res://assets/BGM/info upgrade Ludum Dare 38 - Track 10.wav" id="7_gcjvc"]
 [ext_resource type="Texture2D" uid="uid://be44s50cc6ou0" path="res://scenes/Intro/titleintro.png" id="8_0m17q"]
 [ext_resource type="AudioStream" uid="uid://ca5vti5kga62l" path="res://scenes/Intro/meow_control_opening_scene_voice_over_amplified.mp3" id="9_5o34e"]
+
+[sub_resource type="GDScript" id="GDScript_mtetc"]
+script/source = "extends MenuButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://scenes/optimization/hat_production.tscn\")
+"
 
 [node name="Intro" type="Node2D"]
 position = Vector2(-2, 0)
@@ -78,7 +96,19 @@ volume_db = 5.778
 autoplay = true
 bus = &"BGM"
 
+[node name="Skip" type="MenuButton" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 728.0
+offset_top = 402.0
+offset_right = 911.0
+offset_bottom = 497.0
+scale = Vector2(0.9922, 1.00462)
+theme_override_font_sizes/font_size = 25
+text = "Skip"
+script = SubResource("GDScript_mtetc")
+
 [connection signal="timeout" from="Beam2" to="." method="_on_beam_2_timeout"]
 [connection signal="timeout" from="Beam3" to="." method="_on_beam_3_timeout"]
 [connection signal="timeout" from="titletimer" to="." method="_on_titletimer_timeout"]
 [connection signal="finished" from="AudioStreamPlayer2D2" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]

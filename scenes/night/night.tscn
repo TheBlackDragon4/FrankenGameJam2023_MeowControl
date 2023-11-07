@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdoa0xo7uidex"]
+[gd_scene load_steps=13 format=3 uid="uid://bdoa0xo7uidex"]
 
 [ext_resource type="Script" path="res://scenes/night/night_scene.gd" id="1_4lp2t"]
 [ext_resource type="Texture2D" uid="uid://dcxn07fkppqms" path="res://assets/night/background_night.png" id="2_rqpef"]
@@ -49,6 +49,24 @@ _data = {
 "moon_movement": SubResource("Animation_lajf8")
 }
 
+[sub_resource type="GDScript" id="GDScript_d1b1v"]
+script/source = "extends MenuButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://scenes/optimization/hat_production.tscn\")
+"
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(8, 56)
 
@@ -64,14 +82,6 @@ texture = ExtResource("2_rqpef")
 position = Vector2(-762, -211)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_aadhj")
-
-[node name="button_skip" type="Button" parent="night_scene"]
-offset_left = 505.0
-offset_top = 419.0
-offset_right = 905.0
-offset_bottom = 455.0
-text = "skip night"
-metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="night_scene"]
 autoplay = "Moon/moon_movement"
@@ -98,6 +108,17 @@ volume_db = 10.0
 autoplay = true
 bus = &"BGM"
 
+[node name="Skip" type="MenuButton" parent="night_scene"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 728.0
+offset_top = 402.0
+offset_right = 911.0
+offset_bottom = 497.0
+scale = Vector2(0.9922, 1.00462)
+theme_override_font_sizes/font_size = 25
+text = "Skip"
+script = SubResource("GDScript_d1b1v")
+
 [connection signal="tree_entered" from="night_scene" to="night_scene" method="_on_tree_entered"]
-[connection signal="pressed" from="night_scene/button_skip" to="night_scene" method="_on_button_pressed"]
 [connection signal="animation_finished" from="night_scene/AnimationPlayer" to="night_scene" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="night_scene/Skip" to="night_scene" method="_on_skip_pressed"]

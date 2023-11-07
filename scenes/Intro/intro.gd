@@ -19,15 +19,13 @@ func _on_beam_3_timeout():
 	$Beam3.stop()
 
 
-
-
 func _on_titletimer_timeout():
 	$Titleintro.show()
 	
 
-
-
 func _on_audio_stream_player_2d_2_finished():
-	
-	
+	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")
+
+
+func _on_skip_pressed():
 	get_tree().change_scene_to_file("res://scenes/optimization/hat_production.tscn")

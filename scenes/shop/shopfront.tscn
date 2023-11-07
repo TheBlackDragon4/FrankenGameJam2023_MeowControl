@@ -50,7 +50,7 @@ texture = ExtResource("6_ib74v")
 
 [node name="NpcContainer" type="Node2D" parent="."]
 
-[node name="NextButton" type="MenuButton" parent="."]
+[node name="Skip" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
 offset_left = 728.0
 offset_top = 402.0
@@ -84,5 +84,5 @@ autoplay = true
 bus = &"BGM"
 
 [connection signal="timeout" from="NpcSpawner" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Skip" to="." method="_on_next_button_pressed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

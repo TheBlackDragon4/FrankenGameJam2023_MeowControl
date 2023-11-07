@@ -201,10 +201,10 @@ text = "Go to sleep"
 
 [node name="NextButton" type="MenuButton" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 855.0
-offset_top = 474.0
-offset_right = 1038.0
-offset_bottom = 569.0
+offset_left = 846.0
+offset_top = 446.0
+offset_right = 1029.0
+offset_bottom = 541.0
 scale = Vector2(0.9922, 1.00462)
 theme_override_font_sizes/font_size = 25
 text = "Skip"

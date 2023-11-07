@@ -59,18 +59,23 @@ do emit("change_scene")
 # alles template lul
 if metDog != true
 	Sir Gato: What's a dog doing in my feline hat shop?
-	Barkus : Hold it right there, kitty! I've been on the scent of a diabolical feline with world-domination aspirations. Are you the mastermind behind this wicked scheme?
-	Sir Gato: Oh, Detective Paws, you've got it all wrong. I'm just a harmless, innocent kitty. No plots, no schemes here.
+	Barkus : Hold it right there, kitty! I've been on the scent of a diabolical feline with world-domination aspirations. 
+	Barkus : Are you the mastermind behind this wicked scheme?
+	Sir Gato: Oh, Detective Paws, you've got it all wrong. 
+	Sir Gato: I'm just a harmless, innocent kitty. No plots, no schemes here.
 	Barkus:  Hmmm, I could've sworn I heard rumors about a cat planning to take over the world. Are you sure you're not involved?
-	Sir Gato: Oh, you must be mistaken, Detective. I'm just here for a little sunbathing and some bird-watching. World domination? That's a doggone crazy idea!
-	Barkus: Well, if you say so, kitty. Sorry for the confusion. Just doing my duty to protect the neighborhood.
+	Sir Gato: Oh, you must be mistaken, Detective. I'm just here for a little sunbathing and some bird-watching. 
+	Sir Gato: World domination? That's a doggone crazy idea!
+	Barkus: Well, if you say so, kitty. Sorry for the confusion. 
+	Barkus: Just doing my duty to protect the neighborhood.
 	do metDog = true
 	do emit("customer_done")
 	=> END!
 else
-	Barkus: I can't shake the feeling that something's not quite right around here. Those rumors about a scheming cat keep bothering me. You're up to something, and I won't be fooled this time. What's your real game?
-	Sir Gato: Oh, Detective Paws, you're back. I thought we had cleared up any misunderstandings last time. I assure you, I'm just an ordinary, innocent cat.
-	Barkus: I won't be deceived this time. I need to know the truth.
+	Barkus: I can't shake the feeling that something's not quite right around here. 
+	Barkus: Those rumors about a scheming cat keep bothering me. You're up to something, and I won't be fooled this time. What's your real game?
+	Sir Gato: Oh, Detective Paws, you're back. I thought we had cleared up any misunderstandings last time. 
+	Sir Gato: I assure you, I'm just an ordinary, innocent cat.
 	Barkus: I can't find any proof, but I'll be keeping a close eye on you, kitty. You may have fooled me for now, but I'll be watching.
 	Sir Gato: Very well, Detective Paws. I'll just continue with my nap then.
 	do emit("customer_done")
